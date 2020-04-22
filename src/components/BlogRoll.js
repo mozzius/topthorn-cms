@@ -1,96 +1,85 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import React from "react";
+import styled from "@emotion/styled";
+import { Link, graphql, useStaticQuery } from "gatsby";
+import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
-class BlogRoll extends React.Component {
-  render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+const Blogs = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: "stretch";
+`;
 
-    return (
-      <div className="columns is-multiline">
-        {posts &&
-          posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
-            </div>
-          ))}
-      </div>
-    )
+const Blog = styled.article`
+  margin-bottom: 15px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  border: ${({ isFeatured, theme }) =>
+    isFeatured ? `2px solid ${theme.blue}` : `1px solid ${theme.grey}`};
+  background-color: white;
+  @media (max-width: 400px) {
+    flex-direction: column-reverse;
   }
-}
+  .left {
+    flex-grow: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    p {
+      max-width: 900px;
+    }
+  }
+  .right {
+    padding: 15px;
+    width: 270px;
+    @media (max-width: 400px) {
+      width: 100%;
+    }
+  }
+`;
 
-BlogRoll.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
+const Title = styled(Link)`
+  font-family: ${({ theme }) => theme.font};
+  color: ${({ theme }) => theme.blue};
+  text-decoration: none;
+  font-size: 21px;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query BlogRollQuery {
-        allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-        ) {
-          edges {
-            node {
-              excerpt(pruneLength: 400)
-              id
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                templateKey
-                date(formatString: "MMMM DD, YYYY")
-                featuredpost
-                featuredimage {
-                  childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
+const Date = styled.p`
+  font-size: 14px;
+`;
+
+const BlogRoll = ({ count }) => {
+  const {
+    allMarkdownRemark: { edges: posts }
+  } = useStaticQuery(graphql`
+    query BlogRollQuery {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+      ) {
+        edges {
+          node {
+            excerpt(pruneLength: 200)
+            id
+            timeToRead
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              templateKey
+              date(formatString: "MMMM DD, YYYY")
+              featuredpost
+              featuredimage {
+                childImageSharp {
+                  fluid(maxWidth: 270, quality: 100) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -98,7 +87,40 @@ export default () => (
           }
         }
       }
-    `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
-  />
-)
+    }
+  `);
+  console.log(posts);
+  return (
+    <Blogs>
+      {posts && posts.length > 0 ? (
+        posts.slice(0, count).map(({ node: post }) => (
+          <Blog isFeatured={post.frontmatter.featuredpost} key={post.id}>
+            <div className="left">
+              <header>
+                <Title to={post.fields.slug}>{post.frontmatter.title}</Title>
+                <Date>
+                  {post.timeToRead} minute read &bull; {post.frontmatter.date}
+                </Date>
+              </header>
+              <p>{post.excerpt}</p>
+            </div>
+            {post.frontmatter.featuredimage && (
+              <div className="right">
+                <PreviewCompatibleImage
+                  imageInfo={{
+                    image: post.frontmatter.featuredimage,
+                    alt: `featured image thumbnail for post ${post.frontmatter.title}`
+                  }}
+                />
+              </div>
+            )}
+          </Blog>
+        ))
+      ) : (
+        <p>No Blog posts found - come back soon!</p>
+      )}
+    </Blogs>
+  );
+};
+
+export default BlogRoll;
