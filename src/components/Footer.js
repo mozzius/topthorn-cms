@@ -36,7 +36,8 @@ const Container = styled.footer`
 
   .center {
     width: 100%;
-    max-width: ${({ theme }) => theme.width}px;
+    padding: 0 15px;
+    max-width: ${({ theme }) => theme.width};
     display: flex;
     flex-direction: row;
     align-items: center;

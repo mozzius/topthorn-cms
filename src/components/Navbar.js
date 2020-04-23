@@ -1,98 +1,126 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import React, { useState } from "react";
+import { Link } from "gatsby";
+import logo from "../img/Main_Logo_Colour.png";
+import styled from "@emotion/styled";
+import HamburgerMenu from "react-hamburger-menu";
+import useWindowSize from "react-use-window-size";
+import { css } from "@emotion/core";
 
-const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      active: false,
-      navBarActiveClass: '',
-    }
-  }
+const Nav = styled.nav`
+  background-color: ${({ theme }) => theme.blue};
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: ${({ height }) => height}px;
+  position: fixed;
+  top: 0;
+  z-index: 100px;
+`;
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
+const Inner = styled.div`
+  width: 100%;
+  padding: 0 30px;
+  height: 100%;
+  max-width: ${({ theme }) => theme.width};
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const Title = styled.h1`
+  font-family: ${({ theme }) => theme.font};
+  color: white;
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 5px;
+`;
+
+const Img = styled.img`
+  height: 100%;
+`;
+
+const Blank = styled.div`
+  height: ${({ height }) => height}px;
+`;
+
+const Navbar = () => {
+  const { width, height: windowHeight } = useWindowSize();
+  const [open, setOpen] = useState(false);
+  const isMobile = width < 960;
+  const height = isMobile ? 80 : 120;
+
+  const dropdown = css`
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: ${height}px;
+    height: ${windowHeight - height}px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 0;
+    z-index: 100;
+
+    a {
+      color: black;
+      text-decoration: none;
+      padding: 10px 30px;
+      font-size: 20px;
+
+      &:hover {
+        background-color: #eee;
       }
-    )
-  }
+    }
+  `;
 
-  render() {
-    return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    )
-  }
-}
+  const links = css`
+    height: 100%;
+    display: flex;
+    flex-direction: row;
 
-export default Navbar
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  `;
+
+  const none = css`
+    display: none;
+  `;
+
+  return (
+    <>
+      <Nav height={height}>
+        <Inner>
+          {isMobile ? (
+            <>
+              <Title>Topthorn Arena</Title>
+              <HamburgerMenu
+                color="white"
+                isOpen={open}
+                menuClicked={() => setOpen(o => !o)}
+                height={20}
+                width={25}
+              />
+            </>
+          ) : (
+            <Img src={logo} alt="Topthorn Arena logo" />
+          )}
+          <div css={isMobile ? (open ? dropdown : none) : links}>
+            <Link to="/about">About</Link>
+            <Link to="/products">Products</Link>
+            <Link to="/blog">Blog</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="/contact/examples">Form Examples</Link>
+          </div>
+        </Inner>
+      </Nav>
+      <Blank height={height} />
+    </>
+  );
+};
+
+export default Navbar;

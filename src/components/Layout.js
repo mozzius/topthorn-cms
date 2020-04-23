@@ -22,8 +22,9 @@ export const Panel = styled.div`
   flex-direction: column;
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ title: pageTitle, children }) => {
   const { title, description } = useSiteMetadata();
+  const titleContent = pageTitle ? `${title} | ${pageTitle}` : title;
   return (
     <Centered
       css={css`
@@ -38,7 +39,7 @@ const Layout = ({ children }) => {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href={`${withPrefix("/")}img/apple-touch-icon.png`}
+          href={`${withPrefix("/")}img/apple-icon-180x180.png`}
         />
         <link
           rel="icon"
@@ -53,20 +54,11 @@ const Layout = ({ children }) => {
           sizes="16x16"
         />
 
-        <link
-          rel="mask-icon"
-          href={`${withPrefix("/")}img/safari-pinned-tab.svg`}
-          color="#ff4400"
-        />
-        <meta name="theme-color" content="#fff" />
+        <meta name="theme-color" content="#2f2d5f" />
 
         <meta property="og:type" content="business.business" />
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={titleContent} />
         <meta property="og:url" content="/" />
-        <meta
-          property="og:image"
-          content={`${withPrefix("/")}img/og-image.jpg`}
-        />
       </Helmet>
       <Navbar />
       <Centered>{children}</Centered>
