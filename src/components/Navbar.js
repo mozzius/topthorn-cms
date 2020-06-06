@@ -15,7 +15,7 @@ const Nav = styled.nav`
   flex-direction: column;
   align-items: center;
   height: ${({ height }) => height}px;
-  position: fixed;
+  position: ${({ isMobile }) => (isMobile ? "fixed" : "absolute")};
   top: 0;
   z-index: 10;
 `;
@@ -132,6 +132,30 @@ const Navbar = () => {
       flex-direction: row;
       justify-content: space-between;
 
+      .dropdown-content {
+        box-shadow: 0 0.5em 1em -0.125em rgba(43, 37, 35, 0.1),
+          0 0px 0 1px rgba(43, 37, 35, 0.02);
+        border-radius: 5px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-width: 100%;
+        z-index: 20;
+
+        a {
+          color: black;
+          width: 100%;
+
+          &:hover {
+            background-color: #eee;
+          }
+        }
+      }
+
       &:hover {
         background-color: #eee;
       }
@@ -161,8 +185,10 @@ const Navbar = () => {
     .dropdown-content {
       position: absolute;
       top: 50px;
-      border: 1px solid black;
       left: 0;
+      box-shadow: 0 0 2px 5px -0.125em rgba(43, 37, 35, 0.1),
+        0 0px 0 1px rgba(43, 37, 35, 0.02);
+      border-radius: 5px;
       background-color: white;
       display: flex;
       flex-direction: column;
@@ -186,7 +212,7 @@ const Navbar = () => {
 
   return (
     <>
-      <Nav height={height}>
+      <Nav height={height} isMobile={isMobile}>
         <Inner>
           {isMobile ? (
             <>
