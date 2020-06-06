@@ -34,13 +34,15 @@ const Inner = styled.div`
   }
 `;
 
-// const Title = styled.h1`
-//   font-family: ${({ theme }) => theme.font};
-//   color: white;
-//   text-transform: uppercase;
-//   font-size: 22px;
-//   letter-spacing: 5px;
-// `;
+const Title = styled.h1`
+  font-family: ${({ theme }) => theme.font};
+  color: white;
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin: 0 20px 0 10px;
+  line-height: 25px;
+`;
 
 const Img = styled.img`
   height: 100%;
@@ -216,8 +218,16 @@ const Navbar = () => {
         <Inner>
           {isMobile ? (
             <>
-              <Link to="/">
+              <Link
+                to="/"
+                css={css`
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                `}
+              >
                 <Img src={smallLogo} alt="Topthorn Arena logo" />
+                <Title>TOPTHORN ARENA</Title>
               </Link>
               <HamburgerMenu
                 color="white"
