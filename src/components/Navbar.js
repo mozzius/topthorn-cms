@@ -81,8 +81,16 @@ const Dropdown = ({ text, children }) => {
   );
 };
 
+var useWindowSizeBuildable;
+
+if (typeof window === "undefined") {
+  useWindowSizeBuildable = () => ({ width: 1920, height: 1080 });
+} else {
+  useWindowSizeBuildable = useWindowSize;
+}
+
 const Navbar = () => {
-  const { width, height: windowHeight } = useWindowSize();
+  const { width, height: windowHeight } = useWindowSizeBuildable();
   const [open, setOpen] = useState(false);
   const isMobile = width < 960;
   const height = isMobile ? 60 : 150;

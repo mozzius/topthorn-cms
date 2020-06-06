@@ -89,7 +89,7 @@ const BlogRoll = ({ count }) => {
       }
     }
   `);
-  console.log(posts);
+
   return (
     <Blogs>
       {posts && posts.length > 0 ? (
