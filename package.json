@@ -38,7 +38,6 @@
     "react-dom": "^16.8.4",
     "react-hamburger-menu": "^1.2.1",
     "react-helmet": "^5.2.0",
-    "react-use-window-size": "^1.0.1",
     "uuid": "^7.0.0"
   },
   "keywords": [

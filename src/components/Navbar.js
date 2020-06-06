@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { Link } from "gatsby";
 import logo from "../img/Main_Logo_Colour.png";
 import smallLogo from "../img/horse.png";
 import styled from "@emotion/styled";
 import HamburgerMenu from "react-hamburger-menu";
-import useWindowSize from "react-use-window-size";
 import { css } from "@emotion/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
@@ -18,7 +17,7 @@ const Nav = styled.nav`
   height: ${({ height }) => height}px;
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 10;
 `;
 
 const Inner = styled.div`
@@ -81,19 +80,31 @@ const Dropdown = ({ text, children }) => {
   );
 };
 
-var useWindowSizeBuildable;
-
-if (typeof window === "undefined") {
-  useWindowSizeBuildable = () => ({ width: 1920, height: 1080 });
-} else {
-  useWindowSizeBuildable = useWindowSize;
-}
-
 const Navbar = () => {
-  const { width, height: windowHeight } = useWindowSizeBuildable();
+  const [
+    { width: windowWidth, height: windowHeight },
+    setWindowSize
+  ] = useState({ width: 1920, height: 1080 });
   const [open, setOpen] = useState(false);
-  const isMobile = width < 960;
+  const isMobile = windowWidth < 960;
   const height = isMobile ? 60 : 150;
+
+  const calcWindowSize = () => {
+    if (window !== undefined) {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    }
+  };
+
+  useLayoutEffect(() => {
+    if (window !== undefined) {
+      calcWindowSize();
+      window.addEventListener("resize", calcWindowSize);
+    }
+    return () => window.removeEventListener("resize", calcWindowSize);
+  }, []);
 
   const dropdown = css`
     position: fixed;
@@ -106,7 +117,7 @@ const Navbar = () => {
     flex-direction: column;
     align-items: stretch;
     padding: 10px 0;
-    z-index: 100;
+    z-index: 15;
 
     a,
     .dropdown {
