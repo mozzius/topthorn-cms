@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Topthorn Arena
-image: /img/rosettes.jpg
+image: /img/rosettes-bw.jpg
 heading: Friendly competition centre
 subheading: in the heart of Suffolk
 mainpitch:
