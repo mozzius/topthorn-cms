@@ -1,17 +1,15 @@
 ---
 templateKey: index-page
 title: Topthorn Arena
-image: /img/cs8_0282_jn.jpg
+image: /img/rosettes.jpg
 heading: Friendly competition centre
 subheading: easily accessible in heart of Suffolk
 mainpitch:
   title: Topthorn Arena
-  description: >+
+  description: |+
     Topthorn Arena is a friendly equestrian centre in the heart of Suffolk .
 
 
-
-    Topthorn reserves the right to spot-check horse passports to check for up to date vaccinations and asks for horses to have had six month boosters. 
 
 description: Kaldi is the ultimate spot for coffee lovers who want to learn
   about their java’s origin and support the farmers that grew it. We take coffee
