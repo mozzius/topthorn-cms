@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = styled.nav`
+  box-sizing: border-box;
   background-color: ${({ theme }) => theme.blue};
   width: 100%;
   display: flex;
@@ -54,8 +55,6 @@ const Blank = styled.div`
 `;
 
 const Icon = styled(FontAwesomeIcon)`
-  position: relative;
-  top: 5px;
   height: 15px;
   margin-left: 5px;
 `;
@@ -83,19 +82,19 @@ const Dropdown = ({ text, children }) => {
 };
 
 const Navbar = () => {
-  const [
-    { width: windowWidth, height: windowHeight },
-    setWindowSize
-  ] = useState({ width: 1920, height: 1080 });
+  const [{ windowWidth, windowHeight }, setWindowSize] = useState({
+    windowWidth: 1920,
+    windowHeight: 1080
+  });
   const [open, setOpen] = useState(false);
   const isMobile = windowWidth < 960;
-  const height = isMobile ? 60 : 150;
+  const height = isMobile ? 60 : 175;
 
   const calcWindowSize = () => {
     if (window !== undefined) {
       setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight
+        windowWidth: window.innerWidth,
+        windowHeight: window.innerHeight
       });
     }
   };
@@ -120,6 +119,10 @@ const Navbar = () => {
     align-items: stretch;
     padding: 10px 0;
     z-index: 15;
+
+    a {
+      height: 45px;
+    }
 
     a,
     .dropdown {
@@ -147,10 +150,12 @@ const Navbar = () => {
         align-items: flex-start;
         min-width: 100%;
         z-index: 20;
+        overflow: hidden;
 
         a {
           color: black;
           width: 100%;
+          white-space: unset;
 
           &:hover {
             background-color: #eee;
@@ -170,18 +175,21 @@ const Navbar = () => {
     flex-direction: row;
     align-items: flex-end;
     position: relative;
+    white-space: nowrap;
 
     a {
       padding: 10px 15px;
       color: white;
       text-decoration: none;
-      height: min-content;
+      height: 45px;
     }
 
     .dropdown {
       padding: 10px 15px;
       color: white;
       cursor: pointer;
+      height: 45px;
+      position: relative;
     }
 
     .dropdown-content {
@@ -190,16 +198,24 @@ const Navbar = () => {
       left: 0;
       box-shadow: 0 0 2px 5px -0.125em rgba(43, 37, 35, 0.1),
         0 0px 0 1px rgba(43, 37, 35, 0.02);
-      border-radius: 5px;
       background-color: white;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       min-width: 100%;
 
+      &:first-child {
+        border-radius: 5px 5px 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 5px 5px;
+      }
+
       a {
         color: black;
         width: 100%;
+        height: unset;
 
         &:hover {
           background-color: #eee;
@@ -224,6 +240,7 @@ const Navbar = () => {
                   display: flex;
                   flex-direction: row;
                   align-items: center;
+                  text-decoration: none;
                 `}
               >
                 <Img src={smallLogo} alt="Topthorn Arena logo" />

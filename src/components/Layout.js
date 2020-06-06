@@ -2,7 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 import styled from "@emotion/styled";
@@ -15,12 +14,14 @@ const Centered = styled.div`
   width: 100%;
 `;
 
-export const Panel = styled.div`
+export const Panel = styled.section`
+  box-sizing: border-box;
   width: 100%;
-  max-width: 960px;
+  max-width: ${({ theme }) => theme.width};
   display: flex;
   flex-direction: column;
   padding: 30px 20px;
+  flex-shrink: 0;
 `;
 
 const Layout = ({ title: pageTitle, children }) => {
