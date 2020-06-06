@@ -1,16 +1,18 @@
 ---
 templateKey: index-page
-title: Equestrian facilities in heart of Suffolk
+title: Topthorn Arena
 image: /img/cs8_0282_jn.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+heading: Friendly competition centre
+subheading: easily accessible in heart of Suffolk
 mainpitch:
-  title: Why Kaldi
-  description: >
-    Kaldi is the coffee store for everyone who believes that great coffee
-    shouldn't just taste good, it should do good too. We source all of our beans
-    directly from small scale sustainable farmers and make sure part of the
-    profits are reinvested in their communities.
+  title: Topthorn Arena
+  description: >+
+    Topthorn Arena is a friendly equestrian centre in the heart of Suffolk .
+
+
+
+    Topthorn reserves the right to spot-check horse passports to check for up to date vaccinations and asks for horses to have had six month boosters. 
+
 description: Kaldi is the ultimate spot for coffee lovers who want to learn
   about their java’s origin and support the farmers that grew it. We take coffee
   production, roasting and brewing seriously and we’re glad to pass that
@@ -45,18 +47,15 @@ intro:
         coffee making techniques. All of the artwork on display there is for
         sale. The full price you pay goes to the artist.
   heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
+  description: We are an affiliated British Dressage venue with regular
+    unaffiliated showjumping and dressage shows, as well as a full programme of
+    popular clinics and arena hire days.
 main:
-  heading: Great coffee with no compromises
+  heading: Arenas with top quality surfaces
   description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
+    Both the indoor and outdoor arenas have been recently resurfaced by
+    Equestrian Surfaces and the site benefits from plenty of parking and a
+    viewing area.
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/jumbotron.jpg
