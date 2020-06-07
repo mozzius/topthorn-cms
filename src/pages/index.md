@@ -3,10 +3,7 @@ templateKey: index-page
 title: Welcome to Topthorn
 image: /img/cs8_7220_jn.jpg
 heading: Friendly competition centre
-subheading: "Topthorn Arena is a friendly equestrian centre in the heart of
-  Suffolk, easily accessible from every corner of East Anglia. We welcome both
-  professional and amateur riders, pony clubs, riding associations and coaches.
-  "
+subheading: "Building confidence, encouraging our sport "
 mainpitch:
   title: Topthorn Arena
   description: |+
@@ -17,33 +14,25 @@ mainpitch:
 description: A warm welcome for professional and beginner riders throughout the year
 intro:
   blurbs:
-    - image: /img/jumbotron.jpg
-      text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
-    - image: /img/jumbotron.jpg
-      text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-    - image: /img/jumbotron.jpg
-      text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-    - image: /img/jumbotron.jpg
-      text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
+    - image: /img/cs8_9633_jn.jpg
+      text: "Unaffiliated showjumping has always been popular at Topthorn, and our
+        Friday night showjumping evenings are often a first competition for
+        local riders or a useful informal training show for young riders and/or
+        horses.  Our regular Mini to Metre showjumping competitions offer
+        smaller heights in the morning, up to 1m in the afternoon with more
+        fillers. Our showjumping shows offer a friendly competition environment,
+        giving an encouraging experience to horse and rider. "
+    - image: /img/cs8_2770_jn.jpg
+      text: "Topthorn is proud to be a British Dressage venue, with fortnightly
+        affiliated competitions with highly respected BD judges with classes
+        ranging from Prelim to Medium, with some shows extending to PSG. We also
+        run regular unaffiliated dressage shows starting at Intro level. "
+    - image: /img/cs8_0282_jn.jpg
+      text: "Our arenas are available for hire, with a full range of BSJA show jumps
+        if required. We are fortunate to have a number of popular coaches who
+        use Topthorn for clinic days for both showjumping and dressage,
+        including regular visits from International Dressage coach Charlie
+        Hutton. See our calendar for the full programme. "
   heading: What we offer
   description: We are an affiliated British Dressage venue with regular
     unaffiliated showjumping and dressage shows, as well as a full programme of
