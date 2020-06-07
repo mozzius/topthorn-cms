@@ -1,9 +1,12 @@
 ---
 templateKey: index-page
-title: Topthorn Arena
-image: /img/rosettes.jpg
+title: Welcome to Topthorn
+image: /img/cs8_7220_jn.jpg
 heading: Friendly competition centre
-subheading: in the heart of Suffolk
+subheading: "Topthorn Arena is a friendly equestrian centre in the heart of
+  Suffolk, easily accessible from every corner of East Anglia. We welcome both
+  professional and amateur riders, pony clubs, riding associations and coaches.
+  "
 mainpitch:
   title: Topthorn Arena
   description: |+
