@@ -10,7 +10,11 @@ mainpitch:
     Suffolk, easily accessible from every corner of East Anglia. We welcome both
     professional and amateur riders, pony clubs, riding associations and
     coaches. "
-description: xxx
+description: "Both the indoor and outdoor arenas have been recently resurfaced
+  by Equestrian Surfaces and the site benefits from plenty of parking and a
+  viewing area.  Topthorn reserves the right to spot-check horse passports to
+  check for up to date vaccinations and asks for horses to have had six month
+  boosters. "
 intro:
   blurbs:
     - image: /img/cs8_9633_jn.jpg
