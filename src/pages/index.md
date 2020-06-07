@@ -5,7 +5,7 @@ image: /img/sky.jpg
 heading: xxx
 subheading: Building confidence, encouraging our sport
 mainpitch:
-  title: yyy
+  title: XXX
   description: "Topthorn Arena is a friendly equestrian centre in the heart of
     Suffolk, easily accessible from every corner of East Anglia. We welcome both
     professional and amateur riders, pony clubs, riding associations and
