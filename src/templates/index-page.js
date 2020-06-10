@@ -29,7 +29,7 @@ export const IndexPageTemplate = ({
         </HeroTitle>
       </FullWidthImage>
       <Panel>
-        <PageContent className="content" content={content} />
+        <PageContent content={content} />
         <Blurbs items={blurbs} />
       </Panel>
     </>

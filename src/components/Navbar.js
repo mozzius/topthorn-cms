@@ -151,9 +151,16 @@ const Navbar = () => {
         padding: 10px 30px;
         margin: 0;
         text-align: left;
+        height: 45px;
+        display: flex;
+        justify-content: space-between;
 
         &:hover {
           background-color: #eee;
+        }
+
+        svg {
+          align-self: center;
         }
       }
 

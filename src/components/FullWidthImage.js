@@ -18,7 +18,6 @@ const FullWidthImage = styled.div`
 
 export const HeroTitle = styled.div`
   display: flex;
-  height: 100px;
   line-height: 1;
   max-width: 90vw;
   justify-content: space-between;
@@ -32,11 +31,11 @@ export const HeroTitle = styled.div`
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 32px;
   }
 
   h3 {
-    font-size: 22px;
+    font-size: 25px;
   }
 `;
 

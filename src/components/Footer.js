@@ -83,7 +83,6 @@ const Footer = () => {
         <div className="center">
           <img className="logo" src={logo} alt="Topthorn Arena logo" />
           <Content>
-            <p>Topthorn Arena</p>
             <p>Topthorn, Debenham Road, Stonham Aspal, IP14 6BX</p>
             <Social />
             <a href="/admin/" target="_blank" rel="noopener noreferrer">
