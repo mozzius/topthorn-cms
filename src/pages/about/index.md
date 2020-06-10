@@ -1,7 +1,7 @@
 ---
 templateKey: about-page
 path: /about
-title: About us
+title: About Us
 ---
 Topthorn Arena was established in 2009 and has been a firm favourite for East Anglian riders ever since.  When it changed ownership in 2018, the site was upgraded with new arena surfaces and a fresh rebranding for its new chapter. 
 
