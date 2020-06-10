@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import logo from '../img/Main_Logo_Colour.png';
 import smallLogo from '../img/horse.png';
@@ -73,9 +73,15 @@ const Dropdown = ({ text, children }) => {
           !e.currentTarget.contains(e.relatedTarget) && setDropped(false)
         }
       >
-        {text}
-        <Icon icon={dropped ? faChevronUp : faChevronDown} />
-        {dropped && <div className="dropdown-content">{children}</div>}
+        <p>
+          {text}
+          <Icon icon={dropped ? faChevronUp : faChevronDown} />
+        </p>
+        <div
+          className={dropped ? 'dropdown-content dropped' : 'dropdown-content'}
+        >
+          {children}
+        </div>
       </button>
     </>
   );
@@ -99,7 +105,7 @@ const Navbar = () => {
     }
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (window !== undefined) {
       calcWindowSize();
       window.addEventListener('resize', calcWindowSize);
@@ -119,34 +125,41 @@ const Navbar = () => {
     align-items: stretch;
     padding: 10px 0;
     z-index: 15;
+    font-size: 16px;
 
     a {
       height: 45px;
-    }
-
-    a,
-    .dropdown {
-      position: relative;
-      cursor: pointer;
       color: black;
       text-decoration: none;
       padding: 10px 30px;
-      font-size: 20px;
-      height: max-content;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      background: none;
+
+      &:hover {
+        background-color: #eee;
+      }
+    }
+
+    .dropdown {
+      cursor: pointer;
+      color: black;
+      text-decoration: none;
+      background-color: white;
       border: none;
       font-size: 16px;
+      padding: 0;
+
+      p {
+        padding: 10px 30px;
+        margin: 0;
+        text-align: left;
+
+        &:hover {
+          background-color: #eee;
+        }
+      }
 
       .dropdown-content {
-        box-shadow: 0 0.5em 1em -0.125em rgba(43, 37, 35, 0.1),
-          0 0px 0 1px rgba(43, 37, 35, 0.02);
-        border-radius: 5px;
-        position: absolute;
-        top: 50px;
-        left: 0;
+        display: block;
+        width: 100%;
         background-color: white;
         display: flex;
         flex-direction: column;
@@ -154,20 +167,24 @@ const Navbar = () => {
         min-width: 100%;
         z-index: 20;
         overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.2s ease;
+
+        &.dropped {
+          max-height: 100px;
+          border-bottom: 1px solid black;
+        }
 
         a {
           color: black;
           width: 100%;
           white-space: unset;
+          text-align: left;
 
           &:hover {
             background-color: #eee;
           }
         }
-      }
-
-      &:hover {
-        background-color: #eee;
       }
     }
   `;
@@ -199,29 +216,46 @@ const Navbar = () => {
       border: none;
       font-size: 16px;
 
-      svg {
-        align-self: center;
+      p {
+        margin: 0;
       }
     }
 
     .dropdown-content {
       position: absolute;
-      top: 50px;
-      left: 0;
-      box-shadow: 0 0 2px 5px -0.125em rgba(43, 37, 35, 0.1),
-        0 0px 0 1px rgba(43, 37, 35, 0.02);
+      top: 35px;
+      left: 10px;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 8px 32px 0px;
       background-color: white;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
       min-width: 100%;
       overflow: hidden;
       border-radius: 5px;
+      text-align: left;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.1s ease;
+      transition-property: opacity position;
+
+      &.dropped {
+        opacity: 1;
+        pointer-events: auto;
+        top: 50px;
+      }
 
       a {
         color: black;
         width: 100%;
         height: unset;
+        background-color: white;
+
+        &:first-of-type {
+          border-radius: 5px 5px 0 0;
+        }
+        &:last-of-type {
+          border-radius: 0 0 5px 5px;
+        }
 
         &:hover {
           background-color: #eee;

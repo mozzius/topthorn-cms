@@ -54,6 +54,11 @@ const Item = styled.div`
         flex-direction: row;
         align-items: center;
         margin-top: 10px;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
 
         h3 {
           margin: 0;
