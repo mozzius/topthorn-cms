@@ -1,13 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import Features from "../components/Features";
-import Testimonials from "../components/Testimonials";
-import Pricing from "../components/Pricing";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import HeroTitle from "../components/HeroTitle";
-import FullWidthImage from "../components/FullWidthImage";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import Blurbs from '../components/Blurbs';
+import Testimonials from '../components/Testimonials';
+import Pricing from '../components/Pricing';
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
+import FullWidthImage, { HeroTitle } from '../components/FullWidthImage';
 
 export const ProductPageTemplate = ({
   image,
@@ -18,7 +17,7 @@ export const ProductPageTemplate = ({
   main,
   testimonials,
   fullImage,
-  pricing
+  pricing,
 }) => (
   <div className="content">
     <FullWidthImage
@@ -39,7 +38,7 @@ export const ProductPageTemplate = ({
           </div>
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <Features gridItems={intro.blurbs} />
+              <Blurbs items={intro.blurbs} />
               <div className="columns">
                 <div className="column is-7">
                   <h3 className="has-text-weight-semibold is-size-3">
@@ -77,7 +76,7 @@ export const ProductPageTemplate = ({
                     fullImage.childImageSharp
                       ? fullImage.childImageSharp.fluid.src
                       : fullImage
-                  })`
+                  })`,
                 }}
               />
               <h2 className="has-text-weight-semibold is-size-2">
@@ -99,22 +98,22 @@ ProductPageTemplate.propTypes = {
   heading: PropTypes.string,
   description: PropTypes.string,
   intro: PropTypes.shape({
-    blurbs: PropTypes.array
+    blurbs: PropTypes.array,
   }),
   main: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
     image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+    image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   }),
   testimonials: PropTypes.array,
   fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   pricing: PropTypes.shape({
     heading: PropTypes.string,
     description: PropTypes.string,
-    plans: PropTypes.array
-  })
+    plans: PropTypes.array,
+  }),
 };
 
 const ProductPage = ({ data }) => {
@@ -140,9 +139,9 @@ const ProductPage = ({ data }) => {
 ProductPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object
-    })
-  })
+      frontmatter: PropTypes.object,
+    }),
+  }),
 };
 
 export default ProductPage;

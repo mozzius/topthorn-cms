@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-import Layout, { Panel } from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import Layout, { Panel } from '../components/Layout';
+import Content, { HTMLContent } from '../components/Content';
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
@@ -18,7 +18,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
-  contentComponent: PropTypes.func
+  contentComponent: PropTypes.func,
 };
 
 const AboutPage = ({ data }) => {
@@ -36,7 +36,7 @@ const AboutPage = ({ data }) => {
 };
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
 };
 
 export default AboutPage;

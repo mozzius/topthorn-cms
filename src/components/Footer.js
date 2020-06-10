@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 
-import logo from "../img/Main_Logo_Colour.png";
-import facebook from "../img/social/facebook.svg";
-import instagram from "../img/social/instagram.svg";
+import logo from '../img/Main_Logo_Colour.png';
+import facebook from '../img/social/facebook.svg';
+import instagram from '../img/social/instagram.svg';
 
 const Icon = styled.img`
   margin: 10px 10px 10px 0;

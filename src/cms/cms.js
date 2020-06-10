@@ -1,16 +1,32 @@
-import CMS from 'netlify-cms-app'
-import uploadcare from 'netlify-cms-media-library-uploadcare'
-import cloudinary from 'netlify-cms-media-library-cloudinary'
+import React from 'react';
 
-import AboutPagePreview from './preview-templates/AboutPagePreview'
-import BlogPostPreview from './preview-templates/BlogPostPreview'
-import ProductPagePreview from './preview-templates/ProductPagePreview'
-import IndexPagePreview from './preview-templates/IndexPagePreview'
+import CMS from 'netlify-cms-app';
+import uploadcare from 'netlify-cms-media-library-uploadcare';
+import cloudinary from 'netlify-cms-media-library-cloudinary';
 
-CMS.registerMediaLibrary(uploadcare)
-CMS.registerMediaLibrary(cloudinary)
+import AboutPagePreview from './preview-templates/AboutPagePreview';
+import ProductPagePreview from './preview-templates/ProductPagePreview';
+import IndexPagePreview from './preview-templates/IndexPagePreview';
 
-CMS.registerPreviewTemplate('index', IndexPagePreview)
-CMS.registerPreviewTemplate('about', AboutPagePreview)
-CMS.registerPreviewTemplate('products', ProductPagePreview)
-CMS.registerPreviewTemplate('blog', BlogPostPreview)
+import CSSInjector from './CSSInjector';
+
+CMS.registerMediaLibrary(uploadcare);
+CMS.registerMediaLibrary(cloudinary);
+
+CMS.registerPreviewTemplate('index', (props) => (
+  <CSSInjector>
+    <IndexPagePreview {...props} />
+  </CSSInjector>
+));
+
+CMS.registerPreviewTemplate('about', (props) => (
+  <CSSInjector>
+    <AboutPagePreview {...props} />
+  </CSSInjector>
+));
+
+CMS.registerPreviewTemplate('products', (props) => (
+  <CSSInjector>
+    <ProductPagePreview {...props} />
+  </CSSInjector>
+));

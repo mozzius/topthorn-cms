@@ -1,12 +1,12 @@
-import React, { useState, useLayoutEffect } from "react";
-import { Link } from "gatsby";
-import logo from "../img/Main_Logo_Colour.png";
-import smallLogo from "../img/horse.png";
-import styled from "@emotion/styled";
-import HamburgerMenu from "react-hamburger-menu";
-import { css } from "@emotion/core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import React, { useState, useLayoutEffect } from 'react';
+import { Link } from 'gatsby';
+import logo from '../img/Main_Logo_Colour.png';
+import smallLogo from '../img/horse.png';
+import styled from '@emotion/styled';
+import HamburgerMenu from 'react-hamburger-menu';
+import { css } from '@emotion/core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = styled.nav`
   box-sizing: border-box;
@@ -16,7 +16,7 @@ const Nav = styled.nav`
   flex-direction: column;
   align-items: center;
   height: ${({ height }) => height}px;
-  position: ${({ isMobile }) => (isMobile ? "fixed" : "absolute")};
+  position: ${({ isMobile }) => (isMobile ? 'fixed' : 'absolute')};
   top: 0;
   z-index: 10;
 `;
@@ -64,19 +64,19 @@ const Dropdown = ({ text, children }) => {
 
   return (
     <>
-      <div
+      <button
         className="dropdown"
-        onBlur={e =>
+        onClick={() => setDropped((d) => !d)}
+        onKeyDown={() => setDropped((d) => !d)}
+        tabIndex="0"
+        onBlur={(e) =>
           !e.currentTarget.contains(e.relatedTarget) && setDropped(false)
         }
-        onClick={() => setDropped(d => !d)}
-        onKeyDown={() => setDropped(d => !d)}
-        tabIndex="0"
       >
         {text}
         <Icon icon={dropped ? faChevronUp : faChevronDown} />
         {dropped && <div className="dropdown-content">{children}</div>}
-      </div>
+      </button>
     </>
   );
 };
@@ -84,7 +84,7 @@ const Dropdown = ({ text, children }) => {
 const Navbar = () => {
   const [{ windowWidth, windowHeight }, setWindowSize] = useState({
     windowWidth: 1920,
-    windowHeight: 1080
+    windowHeight: 1080,
   });
   const [open, setOpen] = useState(false);
   const isMobile = windowWidth < 960;
@@ -94,7 +94,7 @@ const Navbar = () => {
     if (window !== undefined) {
       setWindowSize({
         windowWidth: window.innerWidth,
-        windowHeight: window.innerHeight
+        windowHeight: window.innerHeight,
       });
     }
   };
@@ -102,9 +102,9 @@ const Navbar = () => {
   useLayoutEffect(() => {
     if (window !== undefined) {
       calcWindowSize();
-      window.addEventListener("resize", calcWindowSize);
+      window.addEventListener('resize', calcWindowSize);
     }
-    return () => window.removeEventListener("resize", calcWindowSize);
+    return () => window.removeEventListener('resize', calcWindowSize);
   }, []);
 
   const dropdown = css`
@@ -136,6 +136,9 @@ const Navbar = () => {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      background: none;
+      border: none;
+      font-size: 16px;
 
       .dropdown-content {
         box-shadow: 0 0.5em 1em -0.125em rgba(43, 37, 35, 0.1),
@@ -190,6 +193,15 @@ const Navbar = () => {
       cursor: pointer;
       height: 45px;
       position: relative;
+      display: flex;
+      flex-direction: row;
+      background: none;
+      border: none;
+      font-size: 16px;
+
+      svg {
+        align-self: center;
+      }
     }
 
     .dropdown-content {
@@ -203,14 +215,8 @@ const Navbar = () => {
       flex-direction: column;
       align-items: flex-start;
       min-width: 100%;
-
-      &:first-child {
-        border-radius: 5px 5px 0 0;
-      }
-
-      &:last-child {
-        border-radius: 0 0 5px 5px;
-      }
+      overflow: hidden;
+      border-radius: 5px;
 
       a {
         color: black;
@@ -253,7 +259,7 @@ const Navbar = () => {
                   cursor: pointer;
                 `}
                 isOpen={open}
-                menuClicked={() => setOpen(o => !o)}
+                menuClicked={() => setOpen((o) => !o)}
                 height={20}
                 width={25}
               />
@@ -270,9 +276,6 @@ const Navbar = () => {
             <Dropdown text="Arena Hire">
               <Link to="/products" onClick={() => setOpen(false)}>
                 Products
-              </Link>
-              <Link to="/blog" onClick={() => setOpen(false)}>
-                Blog
               </Link>
             </Dropdown>
             <Dropdown text="Contact Us">
