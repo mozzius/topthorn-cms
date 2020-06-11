@@ -89,8 +89,8 @@ const Dropdown = ({ text, children }) => {
 
 const Navbar = () => {
   const [{ windowWidth, windowHeight }, setWindowSize] = useState({
-    windowWidth: 1920,
-    windowHeight: 1080,
+    windowWidth: 0,
+    windowHeight: 0,
   });
   const [open, setOpen] = useState(false);
   const isMobile = windowWidth < 960;
