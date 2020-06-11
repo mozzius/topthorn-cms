@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { Link } from 'gatsby';
 import logo from '../img/Main_Logo_Colour.png';
 import smallLogo from '../img/horse.png';
@@ -88,10 +88,173 @@ const Dropdown = ({ text, children }) => {
   );
 };
 
+const DropdownStyles = ({ isMobile, open, height, windowHeight }) =>
+  isMobile
+    ? css`
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: ${height}px;
+        height: ${windowHeight - height}px;
+        background-color: white;
+        display: ${open ? 'flex' : 'none'};
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 0;
+        z-index: 15;
+        font-size: 16px;
+
+        a {
+          height: 45px;
+          color: black;
+          text-decoration: none;
+          padding: 10px 30px;
+
+          &:hover {
+            background-color: #eee;
+          }
+        }
+
+        .dropdown {
+          cursor: pointer;
+          color: black;
+          text-decoration: none;
+          background-color: white;
+          border: none;
+          font-size: 16px;
+          padding: 0;
+
+          p {
+            padding: 10px 30px;
+            margin: 0;
+            text-align: left;
+            height: 45px;
+            display: flex;
+            justify-content: space-between;
+
+            &:hover {
+              background-color: #eee;
+            }
+
+            svg {
+              align-self: center;
+            }
+          }
+
+          .dropdown-content {
+            display: block;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-width: 100%;
+            z-index: 20;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.2s ease;
+
+            &.dropped {
+              max-height: 150px;
+              border-bottom: 1px solid black;
+            }
+
+            a {
+              color: black;
+              width: 100%;
+              white-space: unset;
+              text-align: left;
+
+              &:hover {
+                background-color: #eee;
+              }
+            }
+          }
+        }
+      `
+    : css`
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        position: relative;
+        white-space: nowrap;
+
+        a {
+          padding: 10px 15px;
+          color: white;
+          text-decoration: none;
+          height: 45px;
+        }
+
+        .dropdown {
+          padding: 10px 15px;
+          color: white;
+          cursor: pointer;
+          height: 45px;
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          background: none;
+          border: none;
+          font-size: 16px;
+
+          p {
+            margin: 0;
+          }
+        }
+
+        .dropdown-content {
+          position: absolute;
+          top: 35px;
+          left: 10px;
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 8px 32px 0px;
+          background-color: white;
+          display: flex;
+          flex-direction: column;
+          min-width: 100%;
+          overflow: hidden;
+          border-radius: 5px;
+          text-align: left;
+          opacity: 0;
+          pointer-events: none;
+          transition: 0.1s ease;
+          transition-property: opacity position;
+
+          &.dropped {
+            opacity: 1;
+            pointer-events: auto;
+            top: 50px;
+          }
+
+          a {
+            color: black;
+            width: 100%;
+            height: unset;
+            background-color: white;
+
+            &:first-of-type {
+              border-radius: 5px 5px 0 0;
+            }
+            &:last-of-type {
+              border-radius: 0 0 5px 5px;
+            }
+
+            &:hover {
+              background-color: #eee;
+            }
+          }
+        }
+      `;
+
+const ContentDropdown = styled.div`
+  ${DropdownStyles}
+`;
+
 const Navbar = () => {
   const [{ windowWidth, windowHeight }, setWindowSize] = useState({
-    windowWidth: typeof window === 'undefined' ? 0 : window.innerWidth,
-    windowHeight: typeof window === 'undefined' ? 0 : window.innerHeight,
+    windowWidth: 0,
+    windowHeight: 0,
   });
   const [open, setOpen] = useState(false);
   const isMobile = windowWidth < 960;
@@ -106,7 +269,7 @@ const Navbar = () => {
     }
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (window !== undefined) {
       calcWindowSize();
       window.addEventListener('resize', calcWindowSize);
@@ -121,168 +284,6 @@ const Navbar = () => {
   const ClosingLink = (props) => (
     <Link onClick={() => setOpen(false)} {...props} />
   );
-
-  const dropdown = css`
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: ${height}px;
-    height: ${windowHeight - height}px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 10px 0;
-    z-index: 15;
-    font-size: 16px;
-
-    a {
-      height: 45px;
-      color: black;
-      text-decoration: none;
-      padding: 10px 30px;
-
-      &:hover {
-        background-color: #eee;
-      }
-    }
-
-    .dropdown {
-      cursor: pointer;
-      color: black;
-      text-decoration: none;
-      background-color: white;
-      border: none;
-      font-size: 16px;
-      padding: 0;
-
-      p {
-        padding: 10px 30px;
-        margin: 0;
-        text-align: left;
-        height: 45px;
-        display: flex;
-        justify-content: space-between;
-
-        &:hover {
-          background-color: #eee;
-        }
-
-        svg {
-          align-self: center;
-        }
-      }
-
-      .dropdown-content {
-        display: block;
-        width: 100%;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        min-width: 100%;
-        z-index: 20;
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.2s ease;
-
-        &.dropped {
-          max-height: 150px;
-          border-bottom: 1px solid black;
-        }
-
-        a {
-          color: black;
-          width: 100%;
-          white-space: unset;
-          text-align: left;
-
-          &:hover {
-            background-color: #eee;
-          }
-        }
-      }
-    }
-  `;
-
-  const links = css`
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    position: relative;
-    white-space: nowrap;
-
-    a {
-      padding: 10px 15px;
-      color: white;
-      text-decoration: none;
-      height: 45px;
-    }
-
-    .dropdown {
-      padding: 10px 15px;
-      color: white;
-      cursor: pointer;
-      height: 45px;
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      background: none;
-      border: none;
-      font-size: 16px;
-
-      p {
-        margin: 0;
-      }
-    }
-
-    .dropdown-content {
-      position: absolute;
-      top: 35px;
-      left: 10px;
-      box-shadow: rgba(0, 0, 0, 0.12) 0px 8px 32px 0px;
-      background-color: white;
-      display: flex;
-      flex-direction: column;
-      min-width: 100%;
-      overflow: hidden;
-      border-radius: 5px;
-      text-align: left;
-      opacity: 0;
-      pointer-events: none;
-      transition: 0.1s ease;
-      transition-property: opacity position;
-
-      &.dropped {
-        opacity: 1;
-        pointer-events: auto;
-        top: 50px;
-      }
-
-      a {
-        color: black;
-        width: 100%;
-        height: unset;
-        background-color: white;
-
-        &:first-of-type {
-          border-radius: 5px 5px 0 0;
-        }
-        &:last-of-type {
-          border-radius: 0 0 5px 5px;
-        }
-
-        &:hover {
-          background-color: #eee;
-        }
-      }
-    }
-  `;
-
-  const none = css`
-    display: none;
-  `;
 
   return (
     <>
@@ -327,7 +328,12 @@ const Navbar = () => {
               />
             </ClosingLink>
           )}
-          <div css={isMobile ? (open ? dropdown : none) : links}>
+          <ContentDropdown
+            isMobile={isMobile}
+            height={height}
+            windowHeight={windowHeight}
+            open={open}
+          >
             <ClosingLink to="/">Home</ClosingLink>
             <ClosingLink to="/about">About Us</ClosingLink>
             <Dropdown text="What's On">
@@ -338,7 +344,7 @@ const Navbar = () => {
             <ClosingLink to="/hire">Arena Hire</ClosingLink>
             <ClosingLink to="/photographs">Photos</ClosingLink>
             <ClosingLink to="/contact">Contact</ClosingLink>
-          </div>
+          </ContentDropdown>
         </Inner>
       </Nav>
       <Blank height={height} />
