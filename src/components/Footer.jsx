@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import logo from '../img/Main_Logo_Colour.png';
 import facebook from '../img/social/facebook.svg';
 import instagram from '../img/social/instagram.svg';
+import { Link } from 'gatsby';
 
 const Icon = styled.img`
   margin: 10px 10px 10px 0;
@@ -85,9 +86,13 @@ const Footer = () => {
           <Content>
             <p>Topthorn, Debenham Road, Stonham Aspal, IP14 6BX</p>
             <Social />
-            <a href="/admin/" target="_blank" rel="noopener noreferrer">
-              Admin Dashboard
-            </a>
+            <p>
+              <Link to="/privacy-policy">Privacy Policy</Link>
+              {' / '}
+              <a href="/admin/" target="_blank" rel="noopener noreferrer">
+                Admin Dashboard
+              </a>
+            </p>
           </Content>
         </div>
       </Container>

@@ -5,13 +5,13 @@ import Navbar from '../components/Navbar';
 import useSiteMetadata from './SiteMetadata';
 import { withPrefix } from 'gatsby';
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
 
 const Centered = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  min-height: ${({ big }) => (big ? '100vh' : '0')};
 `;
 
 export const Panel = styled.section`
@@ -28,11 +28,7 @@ const Layout = ({ title: pageTitle, children }) => {
   const { title, description } = useSiteMetadata();
   const titleContent = pageTitle ? `${title} | ${pageTitle}` : title;
   return (
-    <Centered
-      css={css`
-        min-height: 100vh;
-      `}
-    >
+    <Centered big>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>

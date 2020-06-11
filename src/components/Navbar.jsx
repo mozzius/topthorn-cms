@@ -113,6 +113,10 @@ const Navbar = () => {
     return () => window.removeEventListener('resize', calcWindowSize);
   }, []);
 
+  const ClosingLink = (props) => (
+    <Link onClick={() => setOpen(false)} {...props} />
+  );
+
   const dropdown = css`
     position: fixed;
     width: 100%;
@@ -178,7 +182,7 @@ const Navbar = () => {
         transition: max-height 0.2s ease;
 
         &.dropped {
-          max-height: 100px;
+          max-height: 150px;
           border-bottom: 1px solid black;
         }
 
@@ -281,7 +285,7 @@ const Navbar = () => {
         <Inner>
           {isMobile ? (
             <>
-              <Link
+              <ClosingLink
                 to="/"
                 css={css`
                   display: flex;
@@ -292,7 +296,7 @@ const Navbar = () => {
               >
                 <Img src={smallLogo} alt="Topthorn Arena logo" />
                 <Title>TOPTHORN ARENA</Title>
-              </Link>
+              </ClosingLink>
               <HamburgerMenu
                 color="white"
                 css={css`
@@ -306,27 +310,19 @@ const Navbar = () => {
               />
             </>
           ) : (
-            <Link to="/">
+            <ClosingLink to="/">
               <Img src={logo} alt="Topthorn Arena logo" />
-            </Link>
+            </ClosingLink>
           )}
           <div css={isMobile ? (open ? dropdown : none) : links}>
-            <Link to="/about" onClick={() => setOpen(false)}>
-              About
-            </Link>
-            <Dropdown text="Arena Hire">
-              <Link to="/products" onClick={() => setOpen(false)}>
-                Products
-              </Link>
+            <ClosingLink to="/about">About Us</ClosingLink>
+            <Dropdown text="What's On">
+              <ClosingLink to="/events">Events</ClosingLink>
+              <ClosingLink to="/times">Times</ClosingLink>
+              <ClosingLink to="/results">Results</ClosingLink>
             </Dropdown>
-            <Dropdown text="Contact Us">
-              <Link to="/contact" onClick={() => setOpen(false)}>
-                Contact
-              </Link>
-              <Link to="/contact/examples" onClick={() => setOpen(false)}>
-                Form Examples
-              </Link>
-            </Dropdown>
+            <ClosingLink to="/hire">Arena Hire</ClosingLink>
+            <ClosingLink to="/contact">Contact</ClosingLink>
           </div>
         </Inner>
       </Nav>
