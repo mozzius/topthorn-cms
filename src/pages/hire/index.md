@@ -1,7 +1,7 @@
 ---
-templateKey: events-page
-path: /events
-title: Events
+templateKey: hire-page
+path: /hire
+title: Arena Hire
 ---
 
 Topthorn holds regular arena hire days with hour slots. The arena will be set with a full course of show jumps, unless it is advertised as a flatwork day. All bookings are made online and paid for in advance by BACs.
