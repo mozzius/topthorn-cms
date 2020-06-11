@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import logo from '../img/Main_Logo_Colour.png';
 import smallLogo from '../img/horse.png';
@@ -106,7 +106,7 @@ const Navbar = () => {
     }
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (window !== undefined) {
       calcWindowSize();
       window.addEventListener('resize', calcWindowSize);
