@@ -98,11 +98,12 @@ const Navbar = () => {
   const height = isMobile ? 60 : 175;
 
   const calcWindowSize = () => {
-    if (window !== undefined)
+    if (window !== undefined) {
       setWindowSize({
         windowWidth: window.innerWidth,
         windowHeight: window.innerHeight,
       });
+    }
   };
 
   useLayoutEffect(() => {
@@ -111,8 +112,9 @@ const Navbar = () => {
       window.addEventListener('resize', calcWindowSize);
     }
     return () => {
-      if (window !== undefined)
+      if (window !== undefined) {
         window.removeEventListener('resize', calcWindowSize);
+      }
     };
   }, []);
 
