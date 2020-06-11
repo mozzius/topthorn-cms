@@ -89,9 +89,18 @@ const Footer = () => {
             <Social />
             <p>
               <Link to="/privacy-policy">Privacy Policy</Link>
-              {' / '}
+              {' | '}
               <a href="/admin/" target="_blank" rel="noopener noreferrer">
                 Admin Dashboard
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://samuel.felixnewman.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Made with ❤️ by Samuel Newman
               </a>
             </p>
           </Content>

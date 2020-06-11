@@ -7,6 +7,7 @@ const PhotosPagePreview = ({ entry, widgetFor }) => (
     title={entry.getIn(['data', 'title'])}
     button={entry.getIn(['data', 'button'])}
     content={widgetFor('body')}
+    gallery={entry.getIn(['data', 'gallery'])}
   />
 );
 

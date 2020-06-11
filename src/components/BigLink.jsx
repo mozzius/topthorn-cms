@@ -13,20 +13,7 @@ const BigLink = styled(Link)`
   display: flex;
   flex-direction: row;
   align-items: center;
-`;
-
-export const BigLinkExternal = styled.a`
-  background-color: ${({ theme }) => theme.blue || '#2f2d5f'};
-  display: inline-block;
-  align-self: center;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 19px;
-  padding: 10px 25px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  margin: 20px 0;
 `;
 
 export default BigLink;

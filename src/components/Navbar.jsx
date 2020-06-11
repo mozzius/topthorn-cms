@@ -97,12 +97,15 @@ const DropdownStyles = ({ isMobile, open, height, windowHeight }) =>
         top: ${height}px;
         height: ${windowHeight - height}px;
         background-color: white;
-        display: ${open ? 'flex' : 'none'};
+        display: flex;
         flex-direction: column;
         align-items: stretch;
         padding: 10px 0;
         z-index: 15;
         font-size: 16px;
+        opacity: ${open ? 1 : 0};
+        pointer-events: ${open ? 'auto' : 'none'};
+        transition: opacity 0.2s ease;
 
         a {
           height: 45px;

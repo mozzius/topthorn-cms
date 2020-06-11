@@ -7,18 +7,22 @@ import styled from '@emotion/styled';
 
 import Layout, { Panel } from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
-import { BigLinkExternal } from '../components/BigLink';
+import BigLink from '../components/BigLink';
+import ImageGallery from '../components/ImageGallery';
 
 const Icon = styled(FontAwesomeIcon)`
   height: 16px;
   margin-left: 10px;
 `;
 
+const BigLinkExternal = BigLink.withComponent('a');
+
 export const PhotosPageTemplate = ({
   title,
   content,
   button,
   contentComponent,
+  gallery,
 }) => {
   const PageContent = contentComponent || Content;
 
@@ -26,6 +30,7 @@ export const PhotosPageTemplate = ({
     <Panel>
       <h2>{title}</h2>
       <PageContent content={content} />
+      <ImageGallery images={gallery} />
       <BigLinkExternal
         href="https://carolstreetphotography.pixieset.com/"
         target="_blank"
@@ -43,6 +48,7 @@ PhotosPageTemplate.propTypes = {
   content: PropTypes.string,
   button: PropTypes.string,
   contentComponent: PropTypes.func,
+  gallery: PropTypes.array,
 };
 
 const PhotosPage = ({ data }) => {
@@ -55,6 +61,7 @@ const PhotosPage = ({ data }) => {
         title={post.frontmatter.title}
         button={post.frontmatter.button}
         content={post.html}
+        gallery={post.frontmatter.gallery}
       />
     </Layout>
   );
@@ -73,6 +80,16 @@ export const PhotosPageQuery = graphql`
       frontmatter {
         title
         button
+        gallery {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 500, quality: 64) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          caption
+        }
       }
     }
   }
