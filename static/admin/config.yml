@@ -52,7 +52,7 @@ collections:
               default: 'events-page',
             }
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - file: 'src/pages/about/index.md'
         label: 'About Page'
         name: 'about'
@@ -76,7 +76,7 @@ collections:
               default: 'times-page',
             }
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - file: 'src/pages/events/index.md'
         label: 'Events Page'
         name: 'events'
@@ -88,7 +88,7 @@ collections:
               default: 'events-page',
             }
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - file: 'src/pages/results/index.md'
         label: 'Results Page'
         name: 'results'
@@ -100,7 +100,7 @@ collections:
               default: 'results-page',
             }
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - file: 'src/pages/hire/index.md'
         label: 'Arena Hire Page'
         name: 'hire'
@@ -112,7 +112,7 @@ collections:
               default: 'hire-page',
             }
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - file: 'src/pages/contact/index.md'
         label: 'Contact Page'
         name: 'contact'
@@ -124,7 +124,7 @@ collections:
               default: 'contact-page',
             }
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - file: 'src/pages/photographs/index.md'
         label: 'Photographs Page'
         name: 'photos'
@@ -136,7 +136,7 @@ collections:
               default: 'photos-page',
             }
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
           - { label: 'Button text', name: 'button', widget: 'string' }
           - {
               label: Image Gallery,
