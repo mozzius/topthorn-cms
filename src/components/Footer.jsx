@@ -100,7 +100,11 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Made with ❤️ by Samuel Newman
+                Made with{' '}
+                <span role="img" aria-label="love">
+                  ❤️
+                </span>{' '}
+                by Samuel Newman
               </a>
             </p>
           </Content>

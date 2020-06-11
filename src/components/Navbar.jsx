@@ -340,7 +340,7 @@ const Navbar = () => {
             <ClosingLink to="/">Home</ClosingLink>
             <ClosingLink to="/about">About Us</ClosingLink>
             <Dropdown text="What's On">
-              <ClosingLink to="/events">Events</ClosingLink>
+              <ClosingLink to="/events">Events {'&'} Clinics</ClosingLink>
               <ClosingLink to="/times">Times</ClosingLink>
               <ClosingLink to="/results">Results</ClosingLink>
             </Dropdown>

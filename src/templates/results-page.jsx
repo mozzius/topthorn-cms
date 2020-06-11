@@ -20,7 +20,7 @@ export const ResultsPageTemplate = ({ title, content, contentComponent }) => {
       <PageContent content={content} />
       <iframe
         ref={iframeRef}
-        src="https://www.myridinglife.com/RemoteLocationEventList.aspx?LocationID=2400&from=rl"
+        src="https://www.myridinglife.com/RemoteLocationEventResultsandtimes.aspx?locationid=2400&type=results"
         width="100%"
         height={800}
         frameBorder={0}
