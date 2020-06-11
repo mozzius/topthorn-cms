@@ -1,30 +1,32 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import { css } from '@emotion/core';
+import IframeResizer from 'iframe-resizer-react';
+
 import Layout, { Panel } from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
-import iFrameResize from 'iframe-resizer/js/iframeResizer.min.js';
 
 export const HirePageTemplate = ({ title, content, contentComponent }) => {
-  const iframeRef = useRef();
-
-  useEffect(() => {
-    iFrameResize({}, iframeRef.current);
-  }, []);
-
   const PageContent = contentComponent || Content;
 
   return (
     <Panel>
       <h2>{title}</h2>
       <PageContent content={content} />
-      <iframe
-        ref={iframeRef}
+      <IframeResizer
+        checkOrigin={false}
+        autoResize
+        title="Topthorn Events Calender"
+        scrolling
         src="https://www.myridinglife.com/RemoteLocationEventList.aspx?LocationID=2400&from=rl"
-        width="100%"
-        height={800}
         frameBorder={0}
-        title="Topthorn Hire Calender"
+        css={css`
+          border: 1px solid #ddd;
+          width: 1px;
+          min-width: 100%;
+          min-height: 50vh;
+        `}
       />
     </Panel>
   );
