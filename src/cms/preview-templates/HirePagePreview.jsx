@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { HirePageTemplate } from '../../templates/Hire-page';
+import { HirePageTemplate } from '../../templates/hire-page';
 
 const HirePagePreview = ({ entry, widgetFor }) => (
   <HirePageTemplate

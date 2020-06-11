@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { EventsPageTemplate } from '../../templates/Events-page';
+import { EventsPageTemplate } from '../../templates/events-page';
 
 const EventsPagePreview = ({ entry, widgetFor }) => (
   <EventsPageTemplate

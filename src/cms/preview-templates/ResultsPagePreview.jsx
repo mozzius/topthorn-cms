@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { PhotosPageTemplate } from '../../templates/Photos-page';
+import { ResultsPageTemplate } from '../../templates/results-page';
 
-const PhotosPagePreview = ({ entry, widgetFor }) => (
-  <PhotosPageTemplate
+const ResultsPagePreview = ({ entry, widgetFor }) => (
+  <ResultsPageTemplate
     title={entry.getIn(['data', 'title'])}
     content={widgetFor('body')}
   />
 );
 
-PhotosPagePreview.propTypes = {
+ResultsPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
 };
 
-export default PhotosPagePreview;
+export default ResultsPagePreview;
