@@ -7,7 +7,7 @@ const FullWidthImage = styled.div`
   background-color: ${({ theme }) => theme.blue};
   background-image: url(${({ image }) => img(image)});
   filter: grayscale(${({ grayscale }) => (grayscale ? 0.5 : 0)});
-  width: 100vw;
+  width: 100%;
   height: 400px;
   background-size: cover;
   background-position: center;

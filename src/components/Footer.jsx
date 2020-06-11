@@ -42,6 +42,7 @@ const Container = styled.footer`
     display: flex;
     flex-direction: row;
     align-items: center;
+    box-sizing: border-box;
 
     @media (max-width: 400px) {
       flex-direction: column;

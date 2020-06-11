@@ -7,6 +7,7 @@ import { withPrefix } from 'gatsby';
 import styled from '@emotion/styled';
 
 const Centered = styled.div`
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
