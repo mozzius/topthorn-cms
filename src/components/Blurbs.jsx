@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PreviewCompatibleImage from './PreviewCompatibleImage';
 import styled from '@emotion/styled';
-import { Link } from 'gatsby';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const Container = styled.section`
   width: 100%;
@@ -48,29 +45,11 @@ const Item = styled.div`
       padding: 0 15px;
       flex-grow: 1;
 
-      a {
-        color: black;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+      h3 {
         margin-top: 10px;
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
-
-        h3 {
-          margin: 0;
-        }
       }
     }
   }
-`;
-
-const Icon = styled(FontAwesomeIcon)`
-  height: 12px;
-  margin-left: 5px;
 `;
 
 const Blurbs = ({ items }) => (
@@ -81,10 +60,7 @@ const Blurbs = ({ items }) => (
           <PreviewCompatibleImage imageInfo={item} />
         </div>
         <div className="side text">
-          <Link to={item.link}>
-            <h3>{item.title}</h3>
-            <Icon icon={faChevronRight} />
-          </Link>
+          <h3>{item.title}</h3>
           <p>{item.text}</p>
         </div>
       </Item>

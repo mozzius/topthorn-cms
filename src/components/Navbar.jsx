@@ -315,6 +315,7 @@ const Navbar = () => {
             </ClosingLink>
           )}
           <div css={isMobile ? (open ? dropdown : none) : links}>
+            <ClosingLink to="/">Home</ClosingLink>
             <ClosingLink to="/about">About Us</ClosingLink>
             <Dropdown text="What's On">
               <ClosingLink to="/events">Events</ClosingLink>
@@ -322,6 +323,7 @@ const Navbar = () => {
               <ClosingLink to="/results">Results</ClosingLink>
             </Dropdown>
             <ClosingLink to="/hire">Arena Hire</ClosingLink>
+            <ClosingLink to="/photographs">Photos</ClosingLink>
             <ClosingLink to="/contact">Contact</ClosingLink>
           </div>
         </Inner>

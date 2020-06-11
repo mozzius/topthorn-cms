@@ -13,6 +13,7 @@ const IndexPagePreview = ({ entry, getAsset, widgetFor }) => {
         subtitle={data.subtitle}
         content={widgetFor('body')}
         blurbs={data.blurbs || []}
+        button={data.button}
       />
     );
   } else {

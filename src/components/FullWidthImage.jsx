@@ -28,14 +28,16 @@ export const HeroTitle = styled.div`
     text-align: center;
     font-family: Merriweather, serif;
     color: white;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
   }
 
   h1 {
-    font-size: 32px;
+    margin-top: 0;
+    font-size: 36px;
   }
 
   h3 {
-    font-size: 25px;
+    font-size: 26px;
   }
 `;
 

@@ -30,19 +30,19 @@ collections:
           - { label: Subtitle, name: subtitle, widget: string }
           - { label: Body, name: body, widget: markdown }
           - {
-              label: Blurbs,
+              label: Images with Text,
               name: blurbs,
               widget: list,
               fields:
                 [
                   { label: Image, name: image, widget: image },
                   { label: Title, name: title, widget: string },
-                  { label: Link, name: link, widget: string },
                   { label: Text, name: text, widget: text },
                 ],
             }
+          - { label: Button text, name: button, widget: string }
       - file: 'src/pages/events/index.md'
-        label: 'Events'
+        label: 'Events Page'
         name: 'events'
         fields:
           - {
@@ -54,7 +54,7 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
       - file: 'src/pages/about/index.md'
-        label: 'About'
+        label: 'About Page'
         name: 'about'
         fields:
           - {
@@ -66,7 +66,7 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
       - file: 'src/pages/times/index.md'
-        label: 'Times'
+        label: 'Times Page'
         name: 'times'
         fields:
           - {
@@ -78,7 +78,7 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
       - file: 'src/pages/events/index.md'
-        label: 'Events'
+        label: 'Events Page'
         name: 'events'
         fields:
           - {
@@ -90,7 +90,7 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
       - file: 'src/pages/results/index.md'
-        label: 'Results'
+        label: 'Results Page'
         name: 'results'
         fields:
           - {
@@ -102,7 +102,7 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
       - file: 'src/pages/hire/index.md'
-        label: 'Arena Hire'
+        label: 'Arena Hire Page'
         name: 'hire'
         fields:
           - {
@@ -114,7 +114,7 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
       - file: 'src/pages/contact/index.md'
-        label: 'Contact Us'
+        label: 'Contact Page'
         name: 'contact'
         fields:
           - {
@@ -122,6 +122,18 @@ collections:
               name: 'templateKey',
               widget: 'hidden',
               default: 'contact-page',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - file: 'src/pages/photos/index.md'
+        label: 'Photographs Page'
+        name: 'photos'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'photos-page',
             }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }

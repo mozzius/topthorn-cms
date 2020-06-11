@@ -1,11 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import styled from '@emotion/styled';
 
 import Layout, { Panel } from '../components/Layout';
 import Blurbs from '../components/Blurbs';
 import FullWidthImage, { HeroTitle } from '../components/FullWidthImage';
 import Content, { HTMLContent } from '../components/Content';
+import BigLink from '../components/BigLink';
+
+const Icon = styled(FontAwesomeIcon)`
+  height: 16px;
+  margin-left: 10px;
+`;
 
 export const IndexPageTemplate = ({
   image,
@@ -14,6 +23,7 @@ export const IndexPageTemplate = ({
   content,
   contentComponent,
   blurbs,
+  button,
 }) => {
   const PageContent = contentComponent || Content;
   return (
@@ -31,6 +41,10 @@ export const IndexPageTemplate = ({
       <Panel>
         <PageContent content={content} />
         <Blurbs items={blurbs} />
+        <BigLink to="/events">
+          {button}
+          <Icon icon={faChevronRight} />
+        </BigLink>
       </Panel>
     </>
   );
@@ -43,6 +57,7 @@ IndexPageTemplate.propTypes = {
   content: PropTypes.string,
   contentComponent: PropTypes.func,
   blurbs: PropTypes.array,
+  button: PropTypes.string,
 };
 
 const IndexPage = ({ data }) => {
@@ -57,6 +72,7 @@ const IndexPage = ({ data }) => {
         subtitle={frontmatter.subtitle}
         content={html}
         blurbs={frontmatter.blurbs}
+        button={frontmatter.button}
       />
     </Layout>
   );
@@ -75,6 +91,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         subtitle
+        button
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -91,7 +108,6 @@ export const pageQuery = graphql`
             }
           }
           title
-          link
           text
         }
       }
