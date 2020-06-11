@@ -2,9 +2,10 @@ import styled from '@emotion/styled';
 
 const img = (image) => (typeof image === 'string' ? image : image.url);
 
+// background-color: ${({ theme }) => theme.blue};
+
 const FullWidthImage = styled.div`
   box-sizing: border-box;
-  background-color: ${({ theme }) => theme.blue};
   background-image: url(${({ image }) => img(image)});
   filter: grayscale(${({ grayscale }) => (grayscale ? 0.5 : 0)});
   width: 100%;

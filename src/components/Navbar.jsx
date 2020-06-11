@@ -46,8 +46,9 @@ const Title = styled.h1`
 `;
 
 const Img = styled.img`
-  height: 100%;
+  height: ${({ size }) => size.height}px;
   margin-left: 10px;
+  width: ${({ size }) => size.width}px;
 `;
 
 const Blank = styled.div`
@@ -89,8 +90,8 @@ const Dropdown = ({ text, children }) => {
 
 const Navbar = () => {
   const [{ windowWidth, windowHeight }, setWindowSize] = useState({
-    windowWidth: 0,
-    windowHeight: 0,
+    windowWidth: window === undefined ? 0 : window.innerWidth,
+    windowHeight: window === undefined ? 0 : window.innerHeight,
   });
   const [open, setOpen] = useState(false);
   const isMobile = windowWidth < 960;
@@ -294,7 +295,11 @@ const Navbar = () => {
                   text-decoration: none;
                 `}
               >
-                <Img src={smallLogo} alt="Topthorn Arena logo" />
+                <Img
+                  src={smallLogo}
+                  alt="Topthorn Arena logo"
+                  size={{ width: 70, height: 60 }}
+                />
                 <Title>TOPTHORN ARENA</Title>
               </ClosingLink>
               <HamburgerMenu
@@ -311,7 +316,11 @@ const Navbar = () => {
             </>
           ) : (
             <ClosingLink to="/">
-              <Img src={logo} alt="Topthorn Arena logo" />
+              <Img
+                src={logo}
+                alt="Topthorn Arena logo"
+                size={{ width: 255, height: 175 }}
+              />
             </ClosingLink>
           )}
           <div css={isMobile ? (open ? dropdown : none) : links}>
