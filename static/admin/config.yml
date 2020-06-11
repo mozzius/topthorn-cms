@@ -137,3 +137,4 @@ collections:
             }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Button text', name: 'button', widget: 'string' }

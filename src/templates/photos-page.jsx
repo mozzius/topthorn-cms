@@ -14,7 +14,12 @@ const Icon = styled(FontAwesomeIcon)`
   margin-left: 10px;
 `;
 
-export const PhotosPageTemplate = ({ title, content, contentComponent }) => {
+export const PhotosPageTemplate = ({
+  title,
+  content,
+  button,
+  contentComponent,
+}) => {
   const PageContent = contentComponent || Content;
 
   return (
@@ -26,7 +31,7 @@ export const PhotosPageTemplate = ({ title, content, contentComponent }) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Carol Street Photography
+        {button}
         <Icon icon={faExternalLinkAlt} />
       </BigLinkExternal>
     </Panel>
@@ -36,6 +41,7 @@ export const PhotosPageTemplate = ({ title, content, contentComponent }) => {
 PhotosPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
+  button: PropTypes.string,
   contentComponent: PropTypes.func,
 };
 
@@ -47,6 +53,7 @@ const PhotosPage = ({ data }) => {
       <PhotosPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
+        button={post.frontmatter.button}
         content={post.html}
       />
     </Layout>
@@ -65,6 +72,7 @@ export const PhotosPageQuery = graphql`
       html
       frontmatter {
         title
+        button
       }
     }
   }

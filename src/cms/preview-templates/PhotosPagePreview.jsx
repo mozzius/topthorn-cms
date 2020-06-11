@@ -5,6 +5,7 @@ import { PhotosPageTemplate } from '../../templates/photos-page';
 const PhotosPagePreview = ({ entry, widgetFor }) => (
   <PhotosPageTemplate
     title={entry.getIn(['data', 'title'])}
+    button={entry.getIn(['data', 'button'])}
     content={widgetFor('body')}
   />
 );

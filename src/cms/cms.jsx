@@ -11,6 +11,7 @@ import HirePagePreview from './preview-templates/HirePagePreview';
 import ResultsPagePreview from './preview-templates/ResultsPagePreview';
 import TimesPagePreview from './preview-templates/TimesPagePreview';
 import ContactPagePreview from './preview-templates/ContactPagePreview';
+import PhotosPagePreview from './preview-templates/PhotosPagePreview';
 
 import CSSInjector from './CSSInjector';
 
@@ -56,5 +57,11 @@ CMS.registerPreviewTemplate('times', (props) => (
 CMS.registerPreviewTemplate('contact', (props) => (
   <CSSInjector>
     <ContactPagePreview {...props} />
+  </CSSInjector>
+));
+
+CMS.registerPreviewTemplate('photos', (props) => (
+  <CSSInjector>
+    <PhotosPagePreview {...props} />
   </CSSInjector>
 ));
