@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
 const BigLink = styled(Link)`
-  background-color: ${({ theme }) => theme.blue};
+  background-color: ${({ theme }) => theme.blue || '#2f2d5f'};
   display: inline-block;
   align-self: center;
   color: white;
@@ -16,7 +16,7 @@ const BigLink = styled(Link)`
 `;
 
 export const BigLinkExternal = styled.a`
-  background-color: ${({ theme }) => theme.blue};
+  background-color: ${({ theme }) => theme.blue || '#2f2d5f'};
   display: inline-block;
   align-self: center;
   color: white;

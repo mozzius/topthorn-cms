@@ -45,6 +45,10 @@ const Item = styled.div`
       padding: 0 15px;
       flex-grow: 1;
 
+      @media (max-width: 500px) {
+        padding: 15px 0 0;
+      }
+
       h3 {
         margin-top: 10px;
       }
