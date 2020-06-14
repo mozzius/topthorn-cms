@@ -2,6 +2,7 @@
 templateKey: contact-page
 path: /contact
 title: Contact Us
+emailForm: Please sign up for our newsletter
 ---
 
 ### Contact Details

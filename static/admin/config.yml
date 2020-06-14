@@ -41,6 +41,11 @@ collections:
                 ],
             }
           - { label: Button text, name: button, widget: string }
+          - {
+              label: 'Newsletter Signup Text',
+              name: 'emailForm',
+              widget: 'string',
+            }
       - file: 'src/pages/events/index.md'
         label: 'Events Page'
         name: 'events'
@@ -125,6 +130,11 @@ collections:
             }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown', required: false }
+          - {
+              label: 'Newsletter Signup Text',
+              name: 'emailForm',
+              widget: 'string',
+            }
       - file: 'src/pages/photographs/index.md'
         label: 'Photographs Page'
         name: 'photos'

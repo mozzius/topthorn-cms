@@ -10,6 +10,7 @@ import Blurbs from '../components/Blurbs';
 import FullWidthImage, { HeroTitle } from '../components/FullWidthImage';
 import Content, { HTMLContent } from '../components/Content';
 import BigLink from '../components/BigLink';
+import SignupForm from '../components/SignupForm';
 
 const Icon = styled(FontAwesomeIcon)`
   height: 16px;
@@ -24,6 +25,7 @@ export const IndexPageTemplate = ({
   contentComponent,
   blurbs,
   button,
+  emailForm,
 }) => {
   const PageContent = contentComponent || Content;
   return (
@@ -46,6 +48,7 @@ export const IndexPageTemplate = ({
           <Icon icon={faChevronRight} />
         </BigLink>
       </Panel>
+      <SignupForm text={emailForm} />
     </>
   );
 };
@@ -58,6 +61,7 @@ IndexPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
   blurbs: PropTypes.array,
   button: PropTypes.string,
+  emailForm: PropTypes.string,
 };
 
 const IndexPage = ({ data }) => {
@@ -73,6 +77,7 @@ const IndexPage = ({ data }) => {
         content={html}
         blurbs={frontmatter.blurbs}
         button={frontmatter.button}
+        emailForm={frontmatter.emailForm}
       />
     </Layout>
   );
@@ -92,6 +97,7 @@ export const pageQuery = graphql`
         title
         subtitle
         button
+        emailForm
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {

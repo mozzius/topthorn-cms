@@ -4,8 +4,14 @@ import { graphql } from 'gatsby';
 import Layout, { Panel } from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import { css } from '@emotion/core';
+import SignupForm from '../components/SignupForm';
 
-export const ContactPageTemplate = ({ title, content, contentComponent }) => {
+export const ContactPageTemplate = ({
+  title,
+  content,
+  contentComponent,
+  emailForm,
+}) => {
   const PageContent = contentComponent || Content;
   const map = css`
     width: 100%;
@@ -29,6 +35,7 @@ export const ContactPageTemplate = ({ title, content, contentComponent }) => {
           allowFullScreen
         />
       </div>
+      <SignupForm text={emailForm} />
     </>
   );
 };
@@ -37,6 +44,7 @@ ContactPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
+  emailForm: PropTypes.string,
 };
 
 const ContactPage = ({ data }) => {
@@ -48,6 +56,7 @@ const ContactPage = ({ data }) => {
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
+        emailForm={post.frontmatter.emailForm}
       />
     </Layout>
   );
@@ -65,6 +74,7 @@ export const ContactPageQuery = graphql`
       html
       frontmatter {
         title
+        emailForm
       }
     }
   }
