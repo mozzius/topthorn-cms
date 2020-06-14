@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-image: /img/zoe-jump.png
+image: /img/sky.jpg
 title: Welcome to Topthorn
 subtitle: Building confidence, encouraging our sport
 blurbs:
