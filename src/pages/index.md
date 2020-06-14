@@ -1,9 +1,8 @@
 ---
 templateKey: index-page
-image: /img/sky.jpg
+image: /img/zoe-jump.png
 title: Welcome to Topthorn
 subtitle: Building confidence, encouraging our sport
-emailForm: Please sign up for our newsletter
 blurbs:
   - image: /img/cs8_9633_jn.jpg
     title: Showjumping
@@ -22,13 +21,13 @@ blurbs:
       run regular unaffiliated dressage shows starting at Intro level.
   - image: /img/cs8_0282_jn.jpg
     title: Arena Hire
-    text:
-      Our arenas are available for hire, with a full range of BSJA show jumps if
+    text: Our arenas are available for hire, with a full range of BSJA show jumps if
       required. We are fortunate to have a number of popular coaches who use
       Topthorn for clinic days for both showjumping and dressage, including
       regular visits from International Dressage coach Charlie Hutton. See our
       calendar for the full programme.
 button: See our upcoming Events
+emailForm: Please sign up for our newsletter
 ---
 
 Topthorn Arena is a friendly equestrian centre in the heart of Suffolk, easily accessible from every corner of East Anglia. We welcome both professional and amateur riders, pony clubs, riding associations and coaches. Our aim is to encourage all levels of riding by providing a range of training opportunities and competition experiences.
