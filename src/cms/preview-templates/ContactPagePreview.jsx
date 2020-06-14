@@ -6,6 +6,7 @@ const ContactPagePreview = ({ entry, widgetFor }) => (
   <ContactPageTemplate
     title={entry.getIn(['data', 'title'])}
     content={widgetFor('body')}
+    emailForm={entry.getIn(['data', 'emailForm'])}
   />
 );
 

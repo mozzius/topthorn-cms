@@ -14,6 +14,7 @@ const IndexPagePreview = ({ entry, getAsset, widgetFor }) => {
         content={widgetFor('body')}
         blurbs={data.blurbs || []}
         button={data.button}
+        emailForm={data.emailForm}
       />
     );
   } else {
