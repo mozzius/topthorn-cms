@@ -13,7 +13,6 @@ const BigLink = styled(Link)`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 20px 0;
 `;
 
 export default BigLink;

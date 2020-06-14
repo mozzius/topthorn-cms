@@ -43,6 +43,8 @@ export const IndexPageTemplate = ({
       <Panel>
         <PageContent content={content} />
         <Blurbs items={blurbs} />
+      </Panel>
+      <Panel>
         <BigLink to="/events">
           {button}
           <Icon icon={faChevronRight} />
