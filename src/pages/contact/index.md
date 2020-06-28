@@ -7,7 +7,7 @@ emailForm: For regular updates and news from Topthorn, please sign up for our
 ---
 ### Contact Details
 
-For all enquiries, please email [topthornarena@gmail.com](mailto:topthornarena@gmail.com).
+For all enquiries, please email [topthornarena@gmail.com](mailto:topthornarena@gmail.com). To leave a voicemail message, please call [01449 711962](tel:01449711962).
 
 Please note that the office is not open every day so email is better than telephone as emails are checked every week day.  Many thanks.
 
