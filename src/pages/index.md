@@ -20,7 +20,7 @@ blurbs:
       ranging from Prelim to Medium, with some shows extending to PSG. We also
       run regular unaffiliated dressage shows starting at Intro level.
   - image: /img/ca1_7270_jn.jpg
-    title: Arena Hire
+    title: Arena Hire and Clinics
     text: Our arenas are available for hire, with a full range of BSJA show jumps if
       required. We are fortunate to have a number of popular coaches who use
       Topthorn for clinic days for both showjumping and dressage, including
