@@ -19,7 +19,7 @@ blurbs:
       affiliated competitions with highly respected BD judges with classes
       ranging from Prelim to Medium, with some shows extending to PSG. We also
       run regular unaffiliated dressage shows starting at Intro level.
-  - image: /img/cs8_0282_jn.jpg
+  - image: /img/ca1_7270_jn.jpg
     title: Arena Hire
     text: Our arenas are available for hire, with a full range of BSJA show jumps if
       required. We are fortunate to have a number of popular coaches who use
@@ -29,11 +29,8 @@ blurbs:
 button: See our upcoming Events
 emailForm: Please sign up for our newsletter
 ---
-
 Topthorn Arena is a friendly equestrian centre in the heart of Suffolk, easily accessible from every corner of East Anglia. We welcome both professional and amateur riders, pony clubs, riding associations and coaches. Our aim is to encourage all levels of riding by providing a range of training opportunities and competition experiences.
 
 We are an affiliated British Dressage venue with regular unaffiliated showjumping and dressage shows, as well as a full programme of popular clinics and arena hire days.
 
 Both the indoor and outdoor arenas have been recently resurfaced by Equestrian Surfaces and the site benefits from plenty of parking and a viewing area.
-
-Topthorn reserves the right to spot-check horse passports to check for up to date vaccinations and asks for horses to have had six month boosters.
