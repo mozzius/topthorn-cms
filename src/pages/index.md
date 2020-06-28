@@ -26,8 +26,9 @@ blurbs:
       Topthorn for clinic days for both showjumping and dressage, including
       regular visits from International Dressage coach Charlie Hutton. See our
       calendar for the full programme.
-button: See our upcoming Events
-emailForm: Please sign up for our newsletter
+button: See our calendar for upcoming events and clinics
+emailForm: For regular updates and news from Topthorn, please sign up for our
+  newsletter. We respect your data privacy and never sell on your details.
 ---
 Topthorn Arena is a friendly equestrian centre in the heart of Suffolk, easily accessible from every corner of East Anglia. We welcome both professional and amateur riders, pony clubs, riding associations and coaches. Our aim is to encourage all levels of riding by providing a range of training opportunities and competition experiences.
 
