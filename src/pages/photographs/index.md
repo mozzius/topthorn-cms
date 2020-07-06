@@ -13,7 +13,7 @@ gallery:
   - image: /img/ca0_4113_jn.jpg
   - image: /img/cs4_0394_jn.jpg
 ---
-For some of our shows, we are lucky to have Carol Street Photography taking photos which can be ordered directly via her website below. 
+For some of our shows, we are lucky to have Carol Street Photography taking photos which can be ordered directly via her [website](https://carolstreetphotography.pixieset.com/).
 
 If Carol is present and you do not want your photograph taken, please inform Carol or the show secretary. 
 
