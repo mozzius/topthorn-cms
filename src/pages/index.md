@@ -15,10 +15,12 @@ blurbs:
       encouraging experience to horse and rider.
   - image: /img/cs8_2770_jn.jpg
     title: British Dressage
-    text: Topthorn is proud to be a British Dressage venue, with fortnightly
+    text: "Topthorn is proud to be a British Dressage venue, with fortnightly
       affiliated competitions with highly respected BD judges with classes
       ranging from Prelim to Medium, with some shows extending to PSG. We also
-      run regular unaffiliated dressage shows starting at Intro level.
+      run regular unaffiliated dressage shows starting at Intro level and plenty
+      of training opportunities throughout the year to progress your skills and
+      confidence. "
   - image: /img/ca1_7270_jn.jpg
     title: Arena Hire and Clinics
     text: Our arenas are available for hire, with a full range of BSJA show jumps if
