@@ -13,4 +13,4 @@ Please note that the office is not open every day so email is better than teleph
 
 ### Our Address
 
-You can find us at Topthorn Arena, Debenham Road, Stonham Aspal, IP14 6BX
+You can find us just off the A140 between Stonham Aspal and Debenham. Our address is Topthorn Arena, Debenham Road, Stonham Aspal, Suffolk IP14 6BX
