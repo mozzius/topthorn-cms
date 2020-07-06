@@ -36,4 +36,4 @@ Topthorn Arena is a friendly equestrian centre in the heart of Suffolk, easily a
 
 We are an affiliated British Dressage venue with regular unaffiliated showjumping and dressage shows, as well as a full programme of popular clinics and arena hire days.
 
-Both the indoor and outdoor arenas have been recently resurfaced by Equestrian Surfaces and the site benefits from plenty of parking and a viewing area. The indoor arena is 60m x 25m and the outdoor arena is 60m x 20m, and we have full sets of both BSJA and working hunter jumps available.
+Both the indoor and outdoor arenas have been recently resurfaced by Equestrian Surfaces and the site benefits from plenty of parking and a viewing area. The indoor arena is 60m x 23m and the outdoor arena is 60m x 20m, and we have full sets of both BSJA and working hunter jumps available.
