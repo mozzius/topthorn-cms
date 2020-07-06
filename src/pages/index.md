@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-image: /img/cs3_0360_jn.jpg
+image: /img/thumbnail_chs_1538.jpg
 title: Welcome to Topthorn
 subtitle: Building confidence, encouraging our sport
 blurbs:
