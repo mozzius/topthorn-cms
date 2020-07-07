@@ -12,8 +12,6 @@ Topthorn was named after the original owner's grandfather's popular showjumping 
 
 # Facilities
 
-The indoor arena is 60m x 23m and has been recently resurfaced with Cushion Track by Equestrian Surfaces. It benefits from a viewing area and judges' boxes for showjumping and dressage. 
+The indoor arena is 63m x 24m and has been recently resurfaced with Cushion Track by Equestrian Surfaces. It benefits from a viewing area and judges' boxes for showjumping and dressage. 
 
-
-
-The outdoor arena is 60m x 20m and was resurfaced in 2020 with silicon sand and mixed fibre by Equestrian Surfaces. The site also has a grass show field available for summer hire.
+The outdoor arena is 60m x 24m and was resurfaced in 2020 with silicon sand and mixed fibre by Equestrian Surfaces. The site also has a grass show field available for summer hire.
