@@ -9,6 +9,7 @@ import Layout, { Panel } from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import BigLink from '../components/BigLink';
 import ImageGallery from '../components/ImageGallery';
+import { css } from '@emotion/core';
 
 const Icon = styled(FontAwesomeIcon)`
   height: 16px;
@@ -30,8 +31,10 @@ export const PhotosPageTemplate = ({
     <Panel>
       <h2>{title}</h2>
       <PageContent content={content} />
-      <ImageGallery images={gallery} />
       <BigLinkExternal
+        css={css`
+          margin: 30px 0;
+        `}
         href="https://carolstreetphotography.pixieset.com/"
         target="_blank"
         rel="noopener noreferrer"
@@ -39,6 +42,7 @@ export const PhotosPageTemplate = ({
         {button}
         <Icon icon={faExternalLinkAlt} />
       </BigLinkExternal>
+      <ImageGallery images={gallery} />
     </Panel>
   );
 };
