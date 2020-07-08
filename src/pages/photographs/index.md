@@ -17,4 +17,4 @@ For some of our shows and clinics, we are lucky to have Carol Street Photography
 
 If Carol is present and you do not want your photograph taken, please inform Carol or the show secretary. 
 
-Carol generously donates 10% of her Topthorn profits to our charity of the year, which is currently[ St Elizabeth Hospice](https://www.stelizabethhospice.org.uk/).
+Carol generously donates 10% of her Topthorn profits to our charity of the year, which is currently [St Elizabeth Hospice](https://www.stelizabethhospice.org.uk/).
