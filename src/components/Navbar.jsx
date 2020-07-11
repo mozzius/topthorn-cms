@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React, { useState, useLayoutEffect, useRef } from 'react';
 import { Link } from 'gatsby';
 import logo from '../img/Main_Logo_Colour.png';
 import smallLogo from '../img/horse.png';
@@ -62,6 +62,18 @@ const Icon = styled(FontAwesomeIcon)`
 
 const Dropdown = ({ text, children }) => {
   const [dropped, setDropped] = useState(false);
+  const [shown, setShown] = useState(false);
+  const timeRef = useRef();
+
+  useLayoutEffect(() => {
+    const calcShown = () => setShown(dropped);
+    if (dropped) {
+      calcShown();
+    } else {
+      timeRef.current = setTimeout(calcShown, 100);
+    }
+    return () => clearTimeout(timeRef.current);
+  }, [dropped]);
 
   return (
     <>
@@ -78,11 +90,13 @@ const Dropdown = ({ text, children }) => {
           {text}
           <Icon icon={dropped ? faChevronUp : faChevronDown} />
         </p>
-        <div
-          className={dropped ? 'dropdown-content dropped' : 'dropdown-content'}
-        >
-          {children}
-        </div>
+        {shown && (
+          <div
+            className={dropped ? 'dropdown-content' : 'dropdown-content hiding'}
+          >
+            {children}
+          </div>
+        )}
       </button>
     </>
   );
@@ -144,6 +158,28 @@ const DropdownStyles = ({ isMobile, open, height, windowHeight }) =>
             }
           }
 
+          @keyframes drop {
+            from {
+              max-height: 0;
+              border-bottom-width: 0;
+            }
+            to {
+              max-height: 150px;
+              border-bottom-width: 1px;
+            }
+          }
+
+          @keyframes undrop {
+            from {
+              max-height: 150px;
+              border-bottom-width: 1px;
+            }
+            to {
+              max-height: 0;
+              border-bottom-width: 0;
+            }
+          }
+
           .dropdown-content {
             display: block;
             width: 100%;
@@ -153,13 +189,15 @@ const DropdownStyles = ({ isMobile, open, height, windowHeight }) =>
             align-items: flex-start;
             min-width: 100%;
             z-index: 20;
+            max-height: 150px;
             overflow: hidden;
             max-height: 0;
+            animation: drop 0.1s forwards;
             transition: max-height 0.2s ease;
+            border-bottom: 1px solid black;
 
-            &.dropped {
-              max-height: 150px;
-              border-bottom: 1px solid black;
+            &.hiding {
+              animation: undrop 0.1s forwards;
             }
 
             a {
@@ -207,9 +245,30 @@ const DropdownStyles = ({ isMobile, open, height, windowHeight }) =>
           }
         }
 
+        @keyframes drop {
+          from {
+            opacity: 0;
+            top: 35px;
+          }
+          to {
+            opacity: 1;
+            top: 50px;
+          }
+        }
+
+        @keyframes undrop {
+          from {
+            opacity: 1;
+            top: 50px;
+          }
+          to {
+            opacity: 0;
+            top: 35px;
+          }
+        }
+
         .dropdown-content {
           position: absolute;
-          top: 35px;
           left: 10px;
           box-shadow: rgba(0, 0, 0, 0.12) 0px 8px 32px 0px;
           background-color: white;
@@ -219,15 +278,13 @@ const DropdownStyles = ({ isMobile, open, height, windowHeight }) =>
           overflow: hidden;
           border-radius: 5px;
           text-align: left;
-          opacity: 0;
-          pointer-events: none;
-          transition: 0.1s ease;
-          transition-property: opacity position;
+          opacity: 1;
+          pointer-events: auto;
+          animation: drop 0.1s forwards;
 
-          &.dropped {
-            opacity: 1;
-            pointer-events: auto;
-            top: 50px;
+          &.hiding {
+            animation: undrop 0.1s forwards;
+            pointer-events: none;
           }
 
           a {
