@@ -2,6 +2,10 @@
 templateKey: about-page
 path: /about
 title: About Us
+people:
+  - image: /img/img_1465.jpeg
+    title: Stephanie Dowson-Alexander
+    text: Steph
 image: /img/zoe-jump.png
 ---
 Topthorn Arena was established in 2009 and has been a firm favourite for East Anglian riders ever since.  When it changed ownership in 2018, the site was upgraded with new arena surfaces and a fresh rebranding for its new chapter. 
