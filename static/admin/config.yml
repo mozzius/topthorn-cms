@@ -70,6 +70,18 @@ collections:
             }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+          - {
+              label: 'People',
+              name: 'people',
+              widget: 'list',
+              required: false,
+              fields:
+                [
+                  { label: 'Image', name: 'image', widget: 'image' },
+                  { label: 'Title', name: 'title', widget: 'string' },
+                  { label: 'Text', name: 'text', widget: 'text' },
+                ],
+            }
           - { label: 'Image', name: 'image', widget: 'image' }
       - file: 'src/pages/times/index.md'
         label: 'Times Page'

@@ -1,29 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { css } from '@emotion/core';
 
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 import Layout, { Panel } from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
+import Blurbs from '../components/Blurbs';
 
 export const AboutPageTemplate = ({
   title,
   content,
   contentComponent,
   image,
+  people,
 }) => {
   const PageContent = contentComponent || Content;
-  const style = css`
-    margin-bottom: 15px;
-  `;
 
   return (
-    <Panel>
-      <h2>{title}</h2>
-      <PageContent content={content} css={style} />
-      <PreviewCompatibleImage imageInfo={{ image }} />
-    </Panel>
+    <>
+      <Panel>
+        <h2>{title}</h2>
+        <PageContent content={content} />
+        <Blurbs items={people} />
+      </Panel>
+      <Panel>
+        <PreviewCompatibleImage imageInfo={{ image }} />
+      </Panel>
+    </>
   );
 };
 
@@ -32,6 +35,7 @@ AboutPageTemplate.propTypes = {
   content: PropTypes.string,
   contentComponent: PropTypes.func,
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  people: PropTypes.array,
 };
 
 const AboutPage = ({ data }) => {
@@ -44,6 +48,7 @@ const AboutPage = ({ data }) => {
         title={post.frontmatter.title}
         content={post.html}
         image={post.frontmatter.image}
+        people={post.frontmatter.people}
       />
     </Layout>
   );
@@ -61,6 +66,17 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        people {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 420, quality: 64) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          title
+          text
+        }
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {

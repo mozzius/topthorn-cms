@@ -7,6 +7,7 @@ const AboutPagePreview = ({ entry, widgetFor }) => (
     title={entry.getIn(['data', 'title'])}
     content={widgetFor('body')}
     image={entry.getIn(['data', 'image'])}
+    people={entry.getIn(['data', 'people'])}
   />
 );
 
