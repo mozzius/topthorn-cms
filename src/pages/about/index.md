@@ -2,6 +2,10 @@
 templateKey: about-page
 path: /about
 title: About Us
+people:
+  - image: /img/img_1465.jpeg
+    title: Stephanie Dowson-Alexander
+    text: Steph
 image: /img/zoe-jump.png
 people:
   - image: /img/cs8_9633_jn.jpg
