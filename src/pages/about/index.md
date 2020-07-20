@@ -8,7 +8,7 @@ people:
     text: >-
       Steph is our Centre Manager and also runs the Millbank Livery. Steph
       trained at Newton Hall Equitation Centre and has worked at Topthorn since
-      2018, planning the shows and running the office in between training her
+      2018, planning the shows and running the office in-between training her
       own two event horses. 
 
       Instagram: @sda.eventing
