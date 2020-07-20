@@ -5,8 +5,40 @@ title: About Us
 people:
   - image: /img/img_1465.jpeg
     title: Stephanie Dowson-Alexander
-    text: Steph
-image: /img/zoe-jump.png
+    text: >-
+      Steph is our Centre Manager and also runs the Millbank Livery. Steph
+      trained at Newton Hall Equitation Centre and has been worked at Topthorn
+      since 2018, planning the shows and running the office in between training
+      her own two event horses. 
+
+      Instagram: @sda.eventing
+  - image: /img/charlotte.jpg
+    title: Charlotte James
+    text: >-
+      Charlotte is our Level 3 Business Admin apprentice. In particular, as a
+      dressage rider herself, Charlotte helps to look after our dressage
+      competitions, liaising with the judges and writers and ensuring that our
+      affiliated and unaffiliated dressage shows run smoothly. 
+
+      Instagram: @c.j_dressage
+  - image: /img/madison-2-.jpg
+    title: Madison Turnbull
+    text: >-
+      Madison works for Millbank Livery as a Level 2 Equine Groom apprentice,
+      and helps with Topthorn's shows as required.  She enjoys competing with
+      her own horses and is keen to learn all aspects of running a yard. 
+
+      Instagram: @harryandbear.equestrian
+  - image: /img/zoe-jump.png
+    title: Zoe Newman
+    text: >-
+      In-between her sixth form studies, Zoe supports all aspects of life at
+      Topthorn, including helping to judge and course build. She is also
+      training her event horse Hugo, and is looking forward to evening in her
+      gap year. 
+
+      Instagram: @zoenewman.eventing
+image: /img/chs_1538-jn.jpg
 ---
 
 Topthorn Arena was established in 2009 and has been a firm favourite for East Anglian riders ever since. When it changed ownership in 2018, the site was upgraded with new arena surfaces and a fresh rebranding for its new chapter.
