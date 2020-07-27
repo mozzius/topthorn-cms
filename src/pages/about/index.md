@@ -34,7 +34,7 @@ people:
     text: >-
       In-between her sixth form studies, Zoe supports all aspects of life at
       Topthorn, including helping to judge and course build. She is also
-      training her event horse Hugo, and is looking forward to evening in her
+      training her event horse Hugo, and is looking forward to eventing in her
       gap year. 
 
       Instagram: @zoenewman.eventing
