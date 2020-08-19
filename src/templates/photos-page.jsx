@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import styled from '@emotion/styled';
+import { ExternalLink } from 'gatsby-plugin-google-analytics';
 
 import Layout, { Panel } from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
@@ -16,7 +17,7 @@ const Icon = styled(FontAwesomeIcon)`
   margin-left: 10px;
 `;
 
-const BigLinkExternal = BigLink.withComponent('a');
+const BigLinkExternal = BigLink.withComponent(ExternalLink);
 
 export const PhotosPageTemplate = ({
   title,
