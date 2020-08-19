@@ -10,6 +10,7 @@ const BigLink = styled(Link)`
   text-decoration: none;
   font-size: 19px;
   padding: 10px 25px;
+  margin: 20px 0;
   display: flex;
   flex-direction: row;
   align-items: center;

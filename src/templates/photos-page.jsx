@@ -4,20 +4,19 @@ import { graphql } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import styled from '@emotion/styled';
-import { ExternalLink } from 'gatsby-plugin-google-analytics';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 import Layout, { Panel } from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import BigLink from '../components/BigLink';
 import ImageGallery from '../components/ImageGallery';
-import { css } from '@emotion/core';
 
 const Icon = styled(FontAwesomeIcon)`
   height: 16px;
   margin-left: 10px;
 `;
 
-const BigLinkExternal = BigLink.withComponent(ExternalLink);
+const BigLinkExternal = BigLink.withComponent(OutboundLink);
 
 export const PhotosPageTemplate = ({
   title,
@@ -33,9 +32,6 @@ export const PhotosPageTemplate = ({
       <h2>{title}</h2>
       <PageContent content={content} />
       <BigLinkExternal
-        css={css`
-          margin: 30px 0;
-        `}
         href="https://carolstreetphotography.pixieset.com/"
         target="_blank"
         rel="noopener noreferrer"
