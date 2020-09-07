@@ -28,6 +28,17 @@ collections:
           - { label: 'Image', name: 'image', widget: 'image' }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+          - { label: 'Event', name: 'event', widget: 'string' }
+          - {
+              label: 'Event Scoreboard URL',
+              name: 'eventLink',
+              widget: 'string',
+            }
+          - {
+              label: 'Event Expiry Time (may not account for BST)',
+              name: 'expiry',
+              widget: 'datetime',
+            }
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - {
               label: 'Images with Text',
@@ -92,18 +103,6 @@ collections:
               name: 'templateKey',
               widget: 'hidden',
               default: 'times-page',
-            }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
-      - file: 'src/pages/events/index.md'
-        label: 'Events Page'
-        name: 'events'
-        fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'events-page',
             }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown', required: false }

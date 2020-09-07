@@ -11,6 +11,7 @@ import FullWidthImage, { HeroTitle } from '../components/FullWidthImage';
 import Content, { HTMLContent } from '../components/Content';
 import BigLink from '../components/BigLink';
 import SignupForm from '../components/SignupForm';
+import LiveEvent from '../components/LiveEvent';
 
 const Icon = styled(FontAwesomeIcon)`
   height: 16px;
@@ -26,6 +27,9 @@ export const IndexPageTemplate = ({
   blurbs,
   button,
   emailForm,
+  event,
+  link,
+  expiry,
 }) => {
   const PageContent = contentComponent || Content;
   return (
@@ -40,6 +44,7 @@ export const IndexPageTemplate = ({
           <h3>{subtitle}</h3>
         </HeroTitle>
       </FullWidthImage>
+      <LiveEvent event={event} link={link} expiry={expiry} />
       <Panel>
         <PageContent content={content} />
         <Blurbs items={blurbs} />
@@ -64,6 +69,9 @@ IndexPageTemplate.propTypes = {
   blurbs: PropTypes.array,
   button: PropTypes.string,
   emailForm: PropTypes.string,
+  event: PropTypes.string,
+  expiry: PropTypes.string,
+  link: PropTypes.string,
 };
 
 const IndexPage = ({ data }) => {
@@ -80,6 +88,9 @@ const IndexPage = ({ data }) => {
         blurbs={frontmatter.blurbs}
         button={frontmatter.button}
         emailForm={frontmatter.emailForm}
+        event={frontmatter.event}
+        expiry={frontmatter.expiry}
+        link={frontmatter.eventLink}
       />
     </Layout>
   );
@@ -118,6 +129,9 @@ export const pageQuery = graphql`
           title
           text
         }
+        event
+        eventLink
+        expiry
       }
     }
   }
