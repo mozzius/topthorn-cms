@@ -34,11 +34,7 @@ collections:
               name: 'eventLink',
               widget: 'string',
             }
-          - {
-              label: 'Event Expiry Time (may not account for BST)',
-              name: 'expiry',
-              widget: 'datetime',
-            }
+          - { label: 'Event Expiry Time', name: 'expiry', widget: 'datetime' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - {
               label: 'Images with Text',
