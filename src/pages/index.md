@@ -5,7 +5,7 @@ title: Welcome to Topthorn
 subtitle: Building confidence, encouraging our sport
 event: Testing, please ignore
 eventLink: https://samuel.felixnewman.com
-expiry: 2020-09-07T21:40:00.000Z
+expiry: 2020-09-07T21:34:16.285Z
 blurbs:
   - image: /img/cs8_9633_jn.jpg
     title: Showjumping
