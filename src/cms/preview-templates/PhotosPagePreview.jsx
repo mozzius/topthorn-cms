@@ -2,14 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { PhotosPageTemplate } from '../../templates/photos-page';
 
-const PhotosPagePreview = ({ entry, widgetFor }) => (
-  <PhotosPageTemplate
-    title={entry.getIn(['data', 'title'])}
-    button={entry.getIn(['data', 'button'])}
-    content={widgetFor('body')}
-    gallery={entry.getIn(['data', 'gallery'])}
-  />
-);
+const PhotosPagePreview = ({ entry, widgetFor }) => {
+  const data = entry.getIn(['data']).toJS();
+
+  if (data) {
+    return (
+      <PhotosPageTemplate
+        title={data.title}
+        button={data.button}
+        content={widgetFor('body')}
+        gallery={data.gallery}
+      />
+    );
+  } else {
+    return <div>Loading...</div>;
+  }
+};
 
 PhotosPagePreview.propTypes = {
   entry: PropTypes.shape({
