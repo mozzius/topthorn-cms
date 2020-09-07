@@ -3,6 +3,9 @@ templateKey: index-page
 image: /img/chs_1538-jn.jpg
 title: Welcome to Topthorn
 subtitle: Building confidence, encouraging our sport
+event: Testing, please ignore
+eventLink: https://samuel.felixnewman.com
+expiry: 2020-09-07T21:40:00.000Z
 blurbs:
   - image: /img/cs8_9633_jn.jpg
     title: Showjumping
@@ -15,16 +18,15 @@ blurbs:
       encouraging experience to horse and rider.
   - image: /img/cs8_2770_jn.jpg
     title: British Dressage
-    text: 'Topthorn is proud to be a British Dressage venue, with fortnightly
+    text: "Topthorn is proud to be a British Dressage venue, with fortnightly
       affiliated competitions with highly respected BD judges with classes
       ranging from Prelim to Medium, with some shows extending to PSG. We also
       run regular unaffiliated dressage shows starting at Intro level and plenty
       of training opportunities throughout the year to progress your skills and
-      confidence. '
+      confidence. "
   - image: /img/ca1_7270_jn.jpg
     title: Arena Hire and Clinics
-    text:
-      Our arenas are available for hire, with a full range of BSJA show jumps if
+    text: Our arenas are available for hire, with a full range of BSJA show jumps if
       required. We are fortunate to have a number of popular coaches who use
       Topthorn for clinic days for both showjumping and dressage, including
       regular visits from International Dressage coach Charlie Hutton. See our
@@ -32,9 +34,6 @@ blurbs:
 button: See our calendar for upcoming events and clinics
 emailForm: For regular updates and news from Topthorn, please sign up for our
   newsletter. We respect your data privacy and never sell on your details.
-event: Unaffiliated Dressage
-eventLink: https://samuel.felixnewman.com
-expiry: 2020-09-04T17:20:00.000Z
 ---
 
 Topthorn Arena is a friendly equestrian centre in the heart of Suffolk, easily accessible from every corner of East Anglia. We welcome both professional and amateur riders, pony clubs, riding associations and coaches. Our aim is to encourage all levels of riding by providing a range of training opportunities and competition experiences.
