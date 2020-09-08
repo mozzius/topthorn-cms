@@ -9,35 +9,31 @@ people:
       Steph is our Centre Manager and also runs the Millbank Livery. Steph
       trained at Newton Hall Equitation Centre and has worked at Topthorn since
       2018, planning the shows and running the office in-between training her
-      own two event horses. 
-
-      Instagram: @sda.eventing
+      own two event horses.
+    instagram: sda.eventing
   - image: /img/charlotte.jpg
     title: Charlotte James
     text: >-
       Charlotte is our Level 3 Business Admin apprentice. In particular, as a
       dressage rider herself, Charlotte helps to look after our dressage
       competitions, liaising with the judges and writers and ensuring that our
-      affiliated and unaffiliated dressage shows run smoothly. 
-
-      Instagram: @c.j_dressage
+      affiliated and unaffiliated dressage shows run smoothly.
+    instagram: c.j_dressage
   - image: /img/madison-2-.jpg
     title: Madison Turnbull
     text: >-
       Madison works for Millbank Livery as a Level 2 Equine Groom apprentice,
       and helps with Topthorn's shows as required.  She enjoys competing with
-      her own horses and is keen to learn all aspects of running a yard. 
-
-      Instagram: @harryandbear.equestrian
+      her own horses and is keen to learn all aspects of running a yard.
+    instagram: harryandbear.equestrian
   - image: /img/zoe-jump.png
     title: Zoe Newman
     text: >-
       In-between her sixth form studies, Zoe supports all aspects of life at
       Topthorn, including helping to judge and course build. She is also
       training her event horse Hugo, and is looking forward to eventing in her
-      gap year. 
-
-      Instagram: @zoenewman.eventing
+      gap year.
+    instagram: zoenewman.eventing
 image: /img/chs_1538-jn.jpg
 ---
 

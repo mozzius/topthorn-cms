@@ -67,10 +67,14 @@ const Blurbs = ({ items }) => (
         <div className="side text">
           <h3>{item.title}</h3>
           <p>{item.text}</p>
-          {items.instagram && (
+          {item.instagram && (
             <p>
               Instagram:{' '}
-              <OutboundLink href={`https://instagram.com/${item.instagram}/`}>
+              <OutboundLink
+                href={`https://instagram.com/${item.instagram}/`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 @{item.instagram}
               </OutboundLink>
             </p>
