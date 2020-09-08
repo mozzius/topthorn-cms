@@ -76,6 +76,7 @@ export const aboutPageQuery = graphql`
           }
           title
           text
+          instagram
         }
         image {
           childImageSharp {
