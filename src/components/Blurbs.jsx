@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PreviewCompatibleImage from './PreviewCompatibleImage';
 import styled from '@emotion/styled';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const Container = styled.section`
   width: 100%;
@@ -66,6 +67,14 @@ const Blurbs = ({ items }) => (
         <div className="side text">
           <h3>{item.title}</h3>
           <p>{item.text}</p>
+          {items.instagram && (
+            <p>
+              Instagram:{' '}
+              <OutboundLink href={`https://instagram.com/${item.instagram}/`}>
+                @{item.instagram}
+              </OutboundLink>
+            </p>
+          )}
         </div>
       </Item>
     ))}
