@@ -1,0 +1,18 @@
+[
+  {
+    "sku": "TEST001",
+    "name": "Topthorn T-Shirt",
+    "description": "High quality cotton polo neck t-shirt",
+    "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=600&h=600&q=80",
+    "amount": 1000,
+    "currency": "GBP"
+  },
+  {
+    "sku": "TEST002",
+    "name": "Topthorn Hoodie",
+    "description": "Extremely comfortable hoodie",
+    "image": "https://images.unsplash.com/photo-1454329001438-1752daa90420?auto=format&fit=crop&w=600&h=600&q=80",
+    "amount": 1500,
+    "currency": "GBP"
+  }
+]
