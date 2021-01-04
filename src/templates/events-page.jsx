@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import IframeResizer from 'iframe-resizer-react';
 
 import Layout, { Panel } from '../components/Layout';
