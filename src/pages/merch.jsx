@@ -1,6 +1,6 @@
+import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import { useStripe } from "@stripe/react-stripe-js";
-import React, { useEffect, useState } from "react";
 import Layout, { Panel } from "../components/Layout";
 
 const Products = styled.div`
@@ -30,9 +30,15 @@ const ProductContainer = styled.div`
   img {
     width: 100%;
     height: auto;
+    border-radius: 5px;
+  }
+
+  p {
+    select {
+      margin: auto 0 auto 10px;
+    }
   }
 `;
-
 const Product = ({ product, buyProduct }) => {
   const [option, setOption] = useState(
     product.sizes ? product.sizes[0] : undefined,
