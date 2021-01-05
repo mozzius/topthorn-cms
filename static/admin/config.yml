@@ -2,166 +2,166 @@ backend:
   name: git-gateway
   branch: master
   commit_messages:
-    create: 'Create {{collection}} “{{slug}}”'
-    update: 'Update {{collection}} “{{slug}}”'
-    delete: 'Delete {{collection}} “{{slug}}”'
-    uploadMedia: '[skip ci] Upload “{{path}}”'
-    deleteMedia: '[skip ci] Delete “{{path}}”'
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
 
 media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'pages'
-    label: 'Pages'
+  - name: "pages"
+    label: "Pages"
     files:
-      - file: 'src/pages/index.md'
-        label: 'Landing Page'
-        name: 'index'
+      - file: "src/pages/index.md"
+        label: "Landing Page"
+        name: "index"
         fields:
           - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'index-page',
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "index-page",
             }
-          - { label: 'Image', name: 'image', widget: 'image' }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
-          - { label: 'Event', name: 'event', widget: 'string' }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Event", name: "event", widget: "string" }
           - {
-              label: 'Event Scoreboard URL',
-              name: 'eventLink',
-              widget: 'string',
+              label: "Event Scoreboard URL",
+              name: "eventLink",
+              widget: "string",
             }
-          - { label: 'Event Expiry Time', name: 'expiry', widget: 'datetime' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: "Event Expiry Time", name: "expiry", widget: "datetime" }
+          - { label: "Body", name: "body", widget: "markdown" }
           - {
-              label: 'Images with Text',
-              name: 'blurbs',
-              widget: 'list',
+              label: "Images with Text",
+              name: "blurbs",
+              widget: "list",
               fields:
                 [
-                  { label: 'Image', name: 'image', widget: 'image' },
-                  { label: 'Title', name: 'title', widget: 'string' },
-                  { label: 'Text', name: 'text', widget: 'text' },
+                  { label: "Image", name: "image", widget: "image" },
+                  { label: "Title", name: "title", widget: "string" },
+                  { label: "Text", name: "text", widget: "text" },
                 ],
             }
-          - { label: 'Button text', name: 'button', widget: 'string' }
+          - { label: "Button text", name: "button", widget: "string" }
           - {
-              label: 'Newsletter Signup Text',
-              name: 'emailForm',
-              widget: 'string',
+              label: "Newsletter Signup Text",
+              name: "emailForm",
+              widget: "string",
             }
-      - file: 'src/pages/events/index.md'
-        label: 'Events Page'
-        name: 'events'
+      - file: "src/pages/events/index.md"
+        label: "Events Page"
+        name: "events"
         fields:
           - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'events-page',
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "events-page",
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
-      - file: 'src/pages/about/index.md'
-        label: 'About Page'
-        name: 'about'
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+      - file: "src/pages/about/index.md"
+        label: "About Page"
+        name: "about"
         fields:
           - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'about-page',
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about-page",
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
           - {
-              label: 'People',
-              name: 'people',
-              widget: 'list',
+              label: "People",
+              name: "people",
+              widget: "list",
               required: false,
               fields:
                 [
-                  { label: 'Image', name: 'image', widget: 'image' },
-                  { label: 'Title', name: 'title', widget: 'string' },
-                  { label: 'Text', name: 'text', widget: 'text' },
+                  { label: "Image", name: "image", widget: "image" },
+                  { label: "Title", name: "title", widget: "string" },
+                  { label: "Text", name: "text", widget: "text" },
                   {
-                    label: 'Instagram',
-                    name: 'instagram',
-                    widget: 'string',
+                    label: "Instagram",
+                    name: "instagram",
+                    widget: "string",
                     required: false,
                   },
                 ],
             }
-          - { label: 'Image', name: 'image', widget: 'image' }
-      - file: 'src/pages/times/index.md'
-        label: 'Times Page'
-        name: 'times'
+          - { label: "Image", name: "image", widget: "image" }
+      - file: "src/pages/times/index.md"
+        label: "Times Page"
+        name: "times"
         fields:
           - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'times-page',
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "times-page",
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
-      - file: 'src/pages/results/index.md'
-        label: 'Results Page'
-        name: 'results'
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+      - file: "src/pages/results/index.md"
+        label: "Results Page"
+        name: "results"
         fields:
           - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'results-page',
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "results-page",
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
-      - file: 'src/pages/hire/index.md'
-        label: 'Arena Hire Page'
-        name: 'hire'
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+      - file: "src/pages/hire/index.md"
+        label: "Arena Hire Page"
+        name: "hire"
         fields:
           - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'hire-page',
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "hire-page",
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
-      - file: 'src/pages/contact/index.md'
-        label: 'Contact Page'
-        name: 'contact'
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+      - file: "src/pages/contact/index.md"
+        label: "Contact Page"
+        name: "contact"
         fields:
           - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'contact-page',
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "contact-page",
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
           - {
-              label: 'Newsletter Signup Text',
-              name: 'emailForm',
-              widget: 'string',
+              label: "Newsletter Signup Text",
+              name: "emailForm",
+              widget: "string",
             }
-      - file: 'src/pages/photographs/index.md'
-        label: 'Photographs Page'
-        name: 'photos'
+      - file: "src/pages/photographs/index.md"
+        label: "Photographs Page"
+        name: "photos"
         fields:
           - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'photos-page',
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "photos-page",
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
-          - { label: 'Button text', name: 'button', widget: 'string' }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+          - { label: "Button text", name: "button", widget: "string" }
           - {
               label: Image Gallery,
               name: gallery,

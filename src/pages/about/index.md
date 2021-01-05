@@ -12,7 +12,8 @@ people:
     instagram: sda.eventing
   - image: /img/charlotte.jpg
     title: Charlotte James
-    text: Charlotte is our Level 3 Business Admin apprentice. In particular, as a
+    text:
+      Charlotte is our Level 3 Business Admin apprentice. In particular, as a
       dressage rider herself, Charlotte helps to look after our dressage
       competitions, liaising with the judges and writers and ensuring that our
       affiliated and unaffiliated dressage shows run smoothly.
