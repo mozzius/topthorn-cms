@@ -120,7 +120,7 @@ const Merch = () => {
   return (
     <Layout>
       <Panel>
-        <h1>Topthorn Merch</h1>
+        <h1>Topthorn Merchandise</h1>
         {error ? (
           <p>{error}</p>
         ) : (

@@ -1,7 +1,5 @@
 const products = require("./data/products.json");
-const stripe = require("stripe")(
-  "sk_test_51I5u2cFgL8dr7aeo3WzpxWQblPfNZ1JAEv86xECqL49pm8V3ouOeLmvLMmV3B1iGbefPxJiNHw0zSVjIMyIXowQG00DUNXFlZQ",
-);
+const stripe = require("stripe")(process.env.STRIPE_SECRET);
 
 exports.handler = async req => {
   const order = JSON.parse(req.body);
