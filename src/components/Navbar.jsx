@@ -1,12 +1,12 @@
-import React, { useState, useLayoutEffect, useRef } from 'react';
-import { Link } from 'gatsby';
-import logo from '../img/Main_Logo_Colour.png';
-import smallLogo from '../img/horse.png';
-import styled from '@emotion/styled';
-import HamburgerMenu from 'react-hamburger-menu';
-import { css } from '@emotion/core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import React, { useState, useLayoutEffect, useRef } from "react";
+import { Link } from "gatsby";
+import logo from "../img/Main_Logo_Colour.png";
+import smallLogo from "../img/horse.png";
+import styled from "@emotion/styled";
+import HamburgerMenu from "react-hamburger-menu";
+import { css } from "@emotion/core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = styled.nav`
   box-sizing: border-box;
@@ -16,7 +16,7 @@ const Nav = styled.nav`
   flex-direction: column;
   align-items: center;
   height: ${({ height }) => height}px;
-  position: ${({ isMobile }) => (isMobile ? 'fixed' : 'absolute')};
+  position: ${({ isMobile }) => (isMobile ? "fixed" : "absolute")};
   top: 0;
   z-index: 10;
 `;
@@ -79,10 +79,10 @@ const Dropdown = ({ text, children }) => {
     <>
       <button
         className="dropdown"
-        onClick={() => setDropped((d) => !d)}
-        onKeyDown={() => setDropped((d) => !d)}
+        onClick={() => setDropped(d => !d)}
+        onKeyDown={() => setDropped(d => !d)}
         tabIndex="0"
-        onBlur={(e) =>
+        onBlur={e =>
           !e.currentTarget.contains(e.relatedTarget) && setDropped(false)
         }
       >
@@ -92,7 +92,7 @@ const Dropdown = ({ text, children }) => {
         </p>
         {shown && (
           <div
-            className={dropped ? 'dropdown-content' : 'dropdown-content hiding'}
+            className={dropped ? "dropdown-content" : "dropdown-content hiding"}
           >
             {children}
           </div>
@@ -118,7 +118,7 @@ const DropdownStyles = ({ isMobile, open, height, windowHeight }) =>
         z-index: 15;
         font-size: 16px;
         opacity: ${open ? 1 : 0};
-        pointer-events: ${open ? 'auto' : 'none'};
+        pointer-events: ${open ? "auto" : "none"};
         transition: opacity 0.2s ease;
 
         a {
@@ -332,16 +332,16 @@ const Navbar = () => {
   useLayoutEffect(() => {
     if (window !== undefined) {
       calcWindowSize();
-      window.addEventListener('resize', calcWindowSize);
+      window.addEventListener("resize", calcWindowSize);
     }
     return () => {
       if (window !== undefined) {
-        window.removeEventListener('resize', calcWindowSize);
+        window.removeEventListener("resize", calcWindowSize);
       }
     };
   }, []);
 
-  const ClosingLink = (props) => (
+  const ClosingLink = props => (
     <Link onClick={() => setOpen(false)} {...props} />
   );
 
@@ -374,7 +374,7 @@ const Navbar = () => {
                   cursor: pointer;
                 `}
                 isOpen={open}
-                menuClicked={() => setOpen((o) => !o)}
+                menuClicked={() => setOpen(o => !o)}
                 height={20}
                 width={25}
               />
@@ -397,12 +397,13 @@ const Navbar = () => {
             <ClosingLink to="/">Home</ClosingLink>
             <ClosingLink to="/about">About Us</ClosingLink>
             <Dropdown text="What's On">
-              <ClosingLink to="/events">Events {'&'} Clinics</ClosingLink>
+              <ClosingLink to="/events">Events {"&"} Clinics</ClosingLink>
               <ClosingLink to="/times">Times</ClosingLink>
               <ClosingLink to="/results">Results</ClosingLink>
             </Dropdown>
             <ClosingLink to="/hire">Arena Hire</ClosingLink>
             <ClosingLink to="/photographs">Photos</ClosingLink>
+            <ClosingLink to="/merch">Merch</ClosingLink>
             <ClosingLink to="/contact">Contact</ClosingLink>
           </ContentDropdown>
         </Inner>

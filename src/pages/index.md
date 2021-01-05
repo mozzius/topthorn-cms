@@ -26,7 +26,8 @@ blurbs:
       confidence. "
   - image: /img/ca1_7270_jn.jpg
     title: Arena Hire and Clinics
-    text: Our arenas are available for hire, with a full range of BSJA show jumps if
+    text:
+      Our arenas are available for hire, with a full range of BSJA show jumps if
       required. We are fortunate to have a number of popular coaches who use
       Topthorn for clinic days for both showjumping and dressage, including
       regular visits from International Dressage coach Charlie Hutton. See our

@@ -13,8 +13,9 @@ gallery:
   - image: /img/ca0_4113_jn.jpg
   - image: /img/cs4_0394_jn.jpg
 ---
+
 For some of our shows and clinics, we are lucky to have Carol Street Photography taking photos which can be ordered directly via her [website](https://carolstreetphotography.pixieset.com/).
 
-If Carol is present and you do not want your photograph taken, please inform Carol or the show secretary. 
+If Carol is present and you do not want your photograph taken, please inform Carol or the show secretary.
 
 Carol generously donates 10% of her Topthorn profits to our charity of the year, which is currently [St Elizabeth Hospice](https://www.stelizabethhospice.org.uk/).

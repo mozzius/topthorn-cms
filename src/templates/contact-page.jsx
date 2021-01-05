@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import Layout, { Panel } from '../components/Layout';
-import Content, { HTMLContent } from '../components/Content';
-import { css } from '@emotion/core';
-import SignupForm from '../components/SignupForm';
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import Layout, { Panel } from "../components/Layout";
+import Content, { HTMLContent } from "../components/Content";
+import { css } from "@emotion/core";
+import SignupForm from "../components/SignupForm";
 
 export const ContactPageTemplate = ({
   title,

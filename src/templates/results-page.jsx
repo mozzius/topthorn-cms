@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import { css } from '@emotion/core';
-import IframeResizer from 'iframe-resizer-react';
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import { css } from "@emotion/core";
+import IframeResizer from "iframe-resizer-react";
 
-import Layout, { Panel } from '../components/Layout';
-import Content, { HTMLContent } from '../components/Content';
+import Layout, { Panel } from "../components/Layout";
+import Content, { HTMLContent } from "../components/Content";
 
 export const ResultsPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;

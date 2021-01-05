@@ -1,7 +1,7 @@
-import React from 'react';
-import { css } from '@emotion/core';
+import React from "react";
+import { css } from "@emotion/core";
 
-import Layout, { Panel } from '../components/Layout';
+import Layout, { Panel } from "../components/Layout";
 
 const PrivacyPolicy = () => {
   return (
@@ -194,7 +194,7 @@ const PrivacyPolicy = () => {
         </ul>
         <p>
           For more information on these rights please read the relevant guidance
-          issued by the ICO at{' '}
+          issued by the ICO at{" "}
           <a href="https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr">
             https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr
           </a>
