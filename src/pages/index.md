@@ -35,7 +35,9 @@ button: See our calendar for upcoming events and clinics
 emailForm: For regular updates and news from Topthorn, please sign up for our
   newsletter. We respect your data privacy and never sell on your details.
 ---
-**MARCH 2021: We are looking forward to welcoming you back in line with the Government roadmap for easing of lockdown restrictions, with equestrian organised sport allowed from 29th March. Please help us to keep you all safe by following all Covid social distancing guidelines and please bring only one additional person per rider (two allowed if rider is U18).** 
+**Please help us to keep you all safe by following all Covid social distancing guidelines and please bring only one additional person per rider (two allowed if rider is U18). Please do not come on site if you have any Covid symptoms, are self-isolating or have been in contact with anyone with symptoms.** 
+
+*29th March to 12th April: as required by the regulatory body British Equestrian, please complete and return [a self certification declaration of health](www.topthornarena.co.uk//EHRForm.pdf) to topthornarena@gmail.com within 24 hours before arriving on site, to minimise the risk of the spread of the equine herpes virus.* 
 
 Topthorn Arena is a friendly equestrian centre in the heart of Suffolk, easily accessible from every corner of East Anglia. We welcome both professional and amateur riders, pony clubs, riding associations and coaches. Our aim is to encourage all levels of riding by providing a range of training opportunities and competition experiences.
 
