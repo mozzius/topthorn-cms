@@ -50,15 +50,15 @@ const Form = () => (
 
     <Label>
       Your name:
-      <input type="text" name="owner" required />
+      <input type="text" name="name" required />
     </Label>
     <Label>
       Your email address:
-      <input type="email" name="owner" required />
+      <input type="email" name="email" required />
     </Label>
     <Label>
       Your role (rider/owner/administrator):
-      <input type="text" name="owner" required />
+      <input type="text" name="role" required />
     </Label>
 
     <Label>
@@ -75,7 +75,7 @@ const Form = () => (
     </Label>
     <Label>
       Event you wish to attend (name and date):
-      <input type="text" name="owner" required />
+      <input type="text" name="event" required />
     </Label>
     <div>
       Under no circumstances must your horse have:
