@@ -10,13 +10,6 @@ people:
       2018, planning the shows and running the office in-between training her
       own two event horses.
     instagram: sda.eventing
-  - image: /img/charlotte.jpg
-    title: Charlotte James
-    text: Charlotte is our Level 3 Business Admin apprentice. In particular, as a
-      dressage rider herself, Charlotte helps to look after our dressage
-      competitions, liaising with the judges and writers and ensuring that our
-      affiliated and unaffiliated dressage shows run smoothly.
-    instagram: c.j_dressage
   - image: /img/zoe-jump.png
     title: Zoe Newman
     text: In-between her sixth form studies, Zoe supports all aspects of life at
