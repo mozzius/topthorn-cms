@@ -10,6 +10,13 @@ people:
       2018, planning the shows and running the office in-between training her
       own two event horses.
     instagram: sda.eventing
+  - title: Olivia Glen
+    instagram: 15hhwelshie
+    text: "Olivia is our Level 2 Equine Groom Apprentice. She is learning all
+      aspects of horse care and what is involved in running an equestrian venue.
+      Olivia rides a 15hh Welsh Cob youngster called Oliver and they are
+      building up show experience together. "
+    image: /img/olivia.jpg
   - image: /img/zoe-jump.png
     title: Zoe Newman
     text: In-between her sixth form studies, Zoe supports all aspects of life at
