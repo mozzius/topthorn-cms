@@ -10,12 +10,12 @@ blurbs:
   - image: /img/cs8_9633_jn.jpg
     title: Showjumping
     text: Unaffiliated showjumping has always been popular at Topthorn, and our
-      Friday night showjumping evenings are often a first competition for local
-      riders or a useful informal training show for young riders and/or
-      horses.  Our regular Mini to Metre showjumping competitions offer smaller
-      heights in the morning, up to 1m in the afternoon with more fillers. Our
-      showjumping shows offer a friendly competition environment, giving an
-      encouraging experience to horse and rider.
+      fortnightly Friday night showjumping evenings are often a first
+      competition for local riders or a useful informal training show for young
+      riders and/or horses.  Our regular Mini to Metre showjumping competitions
+      offer smaller heights in the morning, up to 1m in the afternoon with more
+      fillers. Our showjumping shows offer a friendly competition environment,
+      giving an encouraging experience to horse and rider.
   - image: /img/cs8_2770_jn.jpg
     title: British Dressage
     text: "Topthorn is proud to be a British Dressage venue, with fortnightly
@@ -35,8 +35,6 @@ button: See our calendar for upcoming events and clinics
 emailForm: For regular updates and news from Topthorn, please sign up for our
   newsletter. We respect your data privacy and never sell on your details.
 ---
-**Please help us to keep you all safe by following all Covid social distancing guidelines and please bring only one additional person per rider (two allowed if rider is U18). Please do not come on site if you have any Covid symptoms, are self-isolating or have been in contact with anyone with symptoms.** 
-
 Topthorn Arena is a friendly equestrian centre in the heart of Suffolk, easily accessible from every corner of East Anglia. We welcome both professional and amateur riders, pony clubs, riding associations and coaches. Our aim is to encourage all levels of riding by providing a range of training opportunities and competition experiences.
 
 We are an affiliated British Dressage venue with regular unaffiliated showjumping and dressage shows, as well as a full programme of popular clinics and arena hire days.
