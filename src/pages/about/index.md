@@ -12,10 +12,9 @@ people:
     instagram: sda.eventing
   - image: /img/zoe-jump.png
     title: Zoe Newman
-    text: In-between her sixth form studies, Zoe supports all aspects of life at
-      Topthorn, including helping to judge and course build. She is also
-      training her event horse Hugo, and is looking forward to eventing in her
-      gap year.
+    text: Zoe supports all aspects of life at Topthorn, including judging and course
+      building. She is also training her event horse Hugo, and is looking
+      forward to eventing in her gap year.
     instagram: zoenewman.eventing
 image: /img/chs_1538-jn.jpg
 ---
