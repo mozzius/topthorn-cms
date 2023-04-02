@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Topthorn Arena',
+    title: 'Topthorn Arena - Equestrian Centre',
     description:
       'Topthorn Arena is an Equestrian centre near Stonham Aspal, Suffolk',
   },
