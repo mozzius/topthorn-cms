@@ -74,24 +74,20 @@ PhotosPage.propTypes = {
 
 export default PhotosPage;
 
-export const PhotosPageQuery = graphql`
-  query PhotosPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        title
-        button
-        gallery {
-          image {
-            childImageSharp {
-              fluid(maxWidth: 500, quality: 64) {
-                ...GatsbyImageSharpFluid
-              }
-            }
+export const PhotosPageQuery = graphql`query PhotosPage($id: String!) {
+  markdownRemark(id: {eq: $id}) {
+    html
+    frontmatter {
+      title
+      button
+      gallery {
+        image {
+          childImageSharp {
+            gatsbyImageData(width: 500, quality: 64, layout: CONSTRAINED)
           }
-          caption
         }
+        caption
       }
     }
   }
-`;
+}`;

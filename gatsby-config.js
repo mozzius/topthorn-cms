@@ -3,6 +3,7 @@ module.exports = {
     title: 'Topthorn Arena - Equestrian Centre',
     description:
       'Topthorn Arena is an Equestrian centre near Stonham Aspal, Suffolk',
+    siteUrl: 'https://topthornarena.co.uk',
   },
   plugins: [
     'gatsby-plugin-emotion',
@@ -36,6 +37,7 @@ module.exports = {
         display: 'swap',
       },
     },
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -78,6 +80,8 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.jsx`,
       },
     },
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-robots-txt',
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 };

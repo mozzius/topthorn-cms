@@ -7,11 +7,12 @@ import styled from '@emotion/styled';
 
 import Layout, { Panel } from '../components/Layout';
 import Blurbs from '../components/Blurbs';
-import FullWidthImage, { HeroTitle } from '../components/FullWidthImage';
+import { HeroTitle } from '../components/FullWidthImage';
 import Content, { HTMLContent } from '../components/Content';
 import BigLink from '../components/BigLink';
 import SignupForm from '../components/SignupForm';
 import LiveEvent from '../components/LiveEvent';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const Icon = styled(FontAwesomeIcon)`
   height: 16px;
@@ -34,16 +35,11 @@ export const IndexPageTemplate = ({
   const PageContent = contentComponent || Content;
   return (
     <>
-      <FullWidthImage
-        image={
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        }
-      >
-        <HeroTitle>
-          <h1>{title}</h1>
-          <h3>{subtitle}</h3>
-        </HeroTitle>
-      </FullWidthImage>
+      <HeroTitle>
+        <GatsbyImage image={image.childImageSharp.gatsbyImageData} alt="" />
+        <h1>{title}</h1>
+        <h3>{subtitle}</h3>
+      </HeroTitle>
       <LiveEvent event={event} link={link} expiry={expiry} />
       <Panel>
         <PageContent content={content} />
@@ -113,17 +109,13 @@ export const pageQuery = graphql`
         emailForm
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
         }
         blurbs {
           image {
             childImageSharp {
-              fluid(maxWidth: 420, quality: 64) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(width: 420, quality: 64, layout: CONSTRAINED)
             }
           }
           title

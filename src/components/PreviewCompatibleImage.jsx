@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
-import { css } from '@emotion/core';
+import { GatsbyImage } from "gatsby-plugin-image";
+import { css } from '@emotion/react';
 
 const PreviewCompatibleImage = ({ imageInfo }) => {
   const imageStyle = css`
@@ -12,13 +12,11 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
   const { alt = '', childImageSharp, image } = imageInfo;
 
   if (!!image && !!image.childImageSharp) {
-    return (
-      <Img css={imageStyle} fluid={image.childImageSharp.fluid} alt={alt} />
-    );
+    return <GatsbyImage image={image.childImageSharp.gatsbyImageData} css={imageStyle} alt={alt} />;
   }
 
   if (!!childImageSharp) {
-    return <Img css={imageStyle} fluid={childImageSharp.fluid} alt={alt} />;
+    return <GatsbyImage image={childImageSharp.gatsbyImageData} css={imageStyle} alt={alt} />;
   }
 
   if (!!image && typeof image === 'string')

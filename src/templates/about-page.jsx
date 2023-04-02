@@ -60,32 +60,26 @@ AboutPage.propTypes = {
 
 export default AboutPage;
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        title
-        people {
-          image {
-            childImageSharp {
-              fluid(maxWidth: 420, quality: 64) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          title
-          text
-          instagram
-        }
+export const aboutPageQuery = graphql`query AboutPage($id: String!) {
+  markdownRemark(id: {eq: $id}) {
+    html
+    frontmatter {
+      title
+      people {
         image {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 420, quality: 64, layout: CONSTRAINED)
           }
+        }
+        title
+        text
+        instagram
+      }
+      image {
+        childImageSharp {
+          gatsbyImageData(quality: 100, layout: FULL_WIDTH)
         }
       }
     }
   }
-`;
+}`;

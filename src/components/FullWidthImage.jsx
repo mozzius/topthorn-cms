@@ -1,29 +1,24 @@
 import styled from '@emotion/styled';
 
-const img = (image) => (typeof image === 'string' ? image : image.url);
-
-// background-color: ${({ theme }) => theme.blue};
-
-const FullWidthImage = styled.div`
-  box-sizing: border-box;
-  background-image: url(${({ image }) => img(image)});
-  filter: grayscale(${({ grayscale }) => (grayscale ? 0.5 : 0)});
-  width: 100%;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 export const HeroTitle = styled.div`
   display: flex;
   line-height: 1;
-  max-width: 90vw;
-  justify-content: space-between;
+  justify-content: center;
   align-items: stretch;
   flex-direction: column;
+  position: relative;
+  height: 400px;
+  width: 100%;
+
+  div {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
   * {
     text-align: center;
@@ -35,11 +30,13 @@ export const HeroTitle = styled.div`
   h1 {
     margin-top: 0;
     font-size: 36px;
+    z-index: 2;
+    padding: 0 10vw;
   }
 
   h3 {
     font-size: 26px;
+    z-index: 2;
+    padding: 0 10vw;
   }
 `;
-
-export default FullWidthImage;

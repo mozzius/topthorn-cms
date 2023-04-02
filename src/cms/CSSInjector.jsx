@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import createCache from '@emotion/cache';
-import { CacheProvider } from '@emotion/core';
+import { CacheProvider } from '@emotion/react';
 
 const CSSInjector = ({ children }) => {
   const cache = useMemo(() => {

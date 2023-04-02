@@ -4,7 +4,7 @@ import logo from '../img/Main_Logo_Colour.png';
 import smallLogo from '../img/horse.png';
 import styled from '@emotion/styled';
 import HamburgerMenu from 'react-hamburger-menu';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
