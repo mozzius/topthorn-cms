@@ -33,7 +33,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`merriweather`, `open sans`],
+        fonts: [`merriweather`, `inter`],
         display: 'swap',
       },
     },
