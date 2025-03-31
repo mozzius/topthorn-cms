@@ -16,6 +16,12 @@ people:
       course building. She is also training her event horse Alan, and combines
       eventing with her university studies. "
     instagram: zoenewman.eventing
+  - title: Becky Reid
+    image: /img/becky.jpg
+    text: "Becky grew up with horses and could ride  before she could walk. She has
+      been a BHS accredited professional coach since 2016. Becky enjoys all
+      disciplines, but her favourite is probably dressage. "
+    instagram: becksreidy78
 image: /img/chs_1538-jn.jpg
 ---
 
